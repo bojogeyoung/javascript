@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>버튼 여러개</title>
+    <style>
+        a{
+            color:cadetblue
+        }
+    </style>
+</head>
+<body>
+    <!-- 버튼 12개 만들기 행열 3x4 -->
+
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <br>
+
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <br>
+
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <br>
+
+    <script>
+
+        // for ( let i = 0 ; i < 3; i++)
+        // {
+        //     for ( let j = 0; j <4; j++)
+        //     {
+        //         document.write("")
+        //     }
+        // }
+
+//        .innerHTML="버튼01";
+
+    let btnsNodeList = document.querySelectorAll("button");
+    for ( let i = 0; i < btnsNodeList.length ; i++)
+    {
+        if ( i<9 )
+        {
+            btnsNodeList[i].innerHTML = "버튼0"+(i+1);    
+        }
+        else
+        {
+            btnsNodeList[i].innerHTML = "버튼"+(i+1);
+        }        
+    }
+
+    for ( let i = 0; i < 4; i++)
+    {
+       btnsNodeList[i].style.backgroundColor="red";//0//1
+       btnsNodeList[i+4].style.backgroundColor="blue";//4//5
+       btnsNodeList[i+8].style.backgroundColor="yellow";//8//9
+    }
+
+    for (let i = 0 ; i<12 ; i=i+4)
+    {        
+        btnsNodeList[i].style.color="gold";//0/4//8///
+        btnsNodeList[i+1].style.color="salmon";//1//5//9 
+        btnsNodeList[i+2].style.color="seagreen";//2//6//10
+        btnsNodeList[i+3].style.color="cadetblue";//3//7//11
+    }
+    
+    for( let i = 0; i<12; i++)
+    {
+        btnsNodeList[i].onmouseover=function(){
+            this.style.transform="scale(110%)";
+        };
+        btnsNodeList[i].onmouseout=function(){
+            this.style.transform="scale(100%)";
+        };
+    }
+
+    btnsNodeList[0].onmouseover=function(){
+        btnsNodeList[0].style.transform="scale(110%)";
+    };
+    btnsNodeList[0].onmouseout=function(){
+        btnsNodeList[11].style.transform="scale(100%)";
+    };
+    bbtnsNodeList[4].onmouseover=function(){
+        this.style.transform="scale(110%)";
+    };
+    
+    
+    </script>
+</body>
+</html>

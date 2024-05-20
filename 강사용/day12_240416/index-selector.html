@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>이벤트</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- <img src = "../day11_240415/images/doll.png" alt="인형" onmouseover="myDo()"> -->
+    <img src = "../day11_240415/images/doll.png" alt="인형" >
+    <script>
+        let imgTag = document.querySelector("img");
+        imgTag.onmouseover = myDo;
+
+        function myDo()
+        {
+            imgTag.style.transform="scale(110%)";            
+        }
+        myDoLeave()
+    </script>
+</body>
+</html>

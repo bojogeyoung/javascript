@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>이벤트</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- <img src = "../day11_240415/images/doll.png" alt="인형" onmouseover="myDo()"> -->
+    <img src = "../day11_240415/images/doll.png" alt="인형" >
+    <img src = "../day11_240415/images/doll2.png" alt="인형" >
+    <script>
+        let imgTagNodeList = document.querySelectorAll("img");    
+        imgTagNodeList[0].onmouseover=function(){
+            imgTagNodeList[0].style.transform="scale(110%)";
+        };
+        imgTagNodeList[1].onmouseover=function(){
+            imgTagNodeList[1].style.transform="scale(90%)";
+        };
+
+        // imgTagNodeList[0].onmouseleave = function(){
+        //     imgTagNodeList[0].style.transform="scale(100%)";
+        // };
+
+        // imgTagNodeList[1].onmouseleave = function(){
+        //     imgTagNodeList[1].style.transform="scale(100%)";
+        // };
+
+        for ( let i = 0; i<imgTagNodeList.length; i++)
+        {
+            imgTagNodeList[i].onmouseleave = function(){
+                this.style.transform="scale(100%)";
+            };
+        }
+
+        // for (let i = 0; i<imgTagNodeList.length; i++)
+        // {
+        //     imgTagNodeList[i].onmouseover = function(){
+        //         this.style.transform="scale(110%)";
+        //     };
+        //     imgTagNodeList[i].onmouseout = function(){
+        //         this.style.transform="scale(100%)";
+        //     };
+        // }
+
+        // function myDo()
+        // {
+        //     //imgTag.style.transform="scale(110%)";            
+        //     imgTagNodeList[0].style.transform="scale(110%)";
+        // }
+        // function myDoLeave()
+        // {
+        //     imgTagNodeList[0].style.transform="scale(100%)";
+        // }
+
+   
+
+
+        //
+        // function abs(num)
+        // {
+        //     imgTagNodeList[num].style.transform="scale(110%)";
+        // }
+
+        // let a = abs;
+        // ;
+
+        // imgTagNodeList[0].onmouseover = abs(0);
+
+
+
+    </script>
+</body>
+</html>

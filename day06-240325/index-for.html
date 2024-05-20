@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>중첩for문</title>
+</head>
+<body>
+    <h1>구구단</h1>
+
+    <script>
+
+        for(i=1; i<=9; i++) // 행을 만들어 주고 근데 왜? 1만 
+        {
+            document.write("<h3>"+i +"단"+"</h3>");  // 큰 블럭으로 나뉜 결과값을 나타낸다.
+                     
+            for(j=1; j<=9; j++) // 옆에 추가되는 열? 추가식을 내용 넣기
+            {
+                document.write(i + "x" + j +"="+ i*j+"<br>"); // 최종 출력되는 내용?
+ 
+           } 
+        
+        }
+        // i가 1로 시작해서  i<=9;  9가 될때까지 9행씩 반복된다.
+        // i 포함 해서 추가된 j 결과 값을 출력한다.
+        // for에 for에 for를 넣으면 하단카테고리처림 추가되는 개념?
+
+
+
+    </script>
+
+    
+</body>
+</html>

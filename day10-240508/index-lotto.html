@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>로또</title>
+</head>
+<body>
+    <script>
+       
+        //1~45의 랜덤한 수를 추출하자.
+
+        //함수호출
+        let result = myRandom(45);
+        document.write(result);
+
+        let lottoArray=new Array();
+        while(lottoArray.length < 6)
+        {
+           let rndNum = myRandom(45);
+           //랜덤한수가 이미 있으면, 중복이 되니까, 넣지 말자.
+          
+           if (checkNum(lottoArray))
+           {
+            // 배열에 값을 넣지 않고, 다시 랜덤함 수를 얻자.
+                continue;
+           }
+           else{
+            lottoArray.push(rndNum);
+            } 
+        }
+
+        document.write(lottoArray);
+
+        // lottoArray.push(myRandom(45));
+
+        //함수정의
+
+        //랜덤수 중복 체크.
+        //파라미터 : 랜덤수 담겨있는 배열
+        //리턴값, 반환값 : true  - 배열에 이미 있음.
+        //                false - 배열에 없는 값임.  
+        
+        checkNum();
+
+        function checkNum(num1, num2){
+            //12, 13, 5
+            //10방금 뽑은 수 
+
+            //10을 들고 배열의 각 방에 가서 값을 비교하자.
+            //비교했는데 값이 같으면 true를 리턴하자.
+            //그렇지 않으면 false를 리턴하자. 
+
+            return false; // 배열에 없는 값
+
+        }
+
+
+        //1~maxNum의 범위의 값을 랜던함게  반환함. 
+        function myRandom(maxNum)       //maxNum 은 원재료를 의미?!
+        {   
+           let rndNum =  Math.random *maxNum + 1;
+        }
+
+        // let lotto = [];
+        
+        // while(lotto.lenth<6){
+        //     let num = parseInt(Math.random() * 45 +1);
+        //     if(lotto.indexOf(num) == -1){
+        //         lotto.push(num);
+        //     }
+
+        // }
+ 
+
+
+
+
+        //2. 예쁘게 보여주자.
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

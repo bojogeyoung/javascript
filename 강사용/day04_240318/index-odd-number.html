@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>짝수홀수 구하기</title>
+    </head>
+    <body>
+        <script>
+            // let num =15;
+            let num = prompt("숫자?");
+            document.write(num+"----");
+           
+           
+            // num%2 == 0 =>짝수
+            // num%2 == 1 =>홀수
+            // 4/2 =>몫 2 나머지0
+            // 6/2 =>   3      0
+            // 5/2=>    2      1 
+            //3/2       1      1
+            
+            if( num !== null)
+            {
+                if ( num.length == 0)
+                {
+                    alert("값이 입력되지 않음");
+                }
+                else
+                {
+                    num = Number(num);
+                    if (num%2==0)//even            
+                    {
+                        document.write("짝수");
+                        alert("짝수");
+                    }
+                    else
+                    {
+                        document.write("홀수");
+                    }
+                }
+                
+            }
+            else//취소
+            {
+                alert("입력이 취소되었습니다");
+            }
+
+
+            if ( bmi <18.5)
+                "저체중"
+            else if (bmi <23)// 18.5<=bmi<23  //if(18.5<=bmi &&  bmi<23)
+                "정상체중"
+            else if (bmi <25)
+                "과체중"
+            else if ( bmi <30)
+                "비만 경도"
+            else if ( bmi <35)
+                "비만 중정도"
+            else
+                "고도"
+            
+
+        </script>
+    </body>
+</html>

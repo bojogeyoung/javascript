@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>함수 연습</title>
+</head>
+<body>
+    
+    
+    
+    
+
+    <script>
+    // https://velog.io/@fejigu/javascript-%EC%A1%B0%EA%B1%B4%EB%AC%B8-117%EB%B2%88-%ED%92%80%EC%9D%B4
+
+     //1. isOldEnoughToDrink
+     //문제 : 나이를 입력받아 술을 마실 수 있는지(18세 이상) 여부를 리턴해야 합니다.
+    
+   
+
+     function isOldEnoughToDrink( age){
+         
+        if(age>=18){
+            document.write("미성년자가 아닙니다.");
+        } else {
+            document.write("미성년자입니다.");
+        }
+     }
+
+
+     //2. isGreaterThan30
+    // 문제 : 온도를 입력받아 해당 온도가 30이 넘는지 확인 후 알맞은 값을 리턴해야 합니다.
+
+      function isGreaterThan30(temp){
+        // 함수이름, (인자값)
+        if(temp <30){
+            return '여름이 매우 덥네요';
+        }else
+            return '에어컨을 켜야겠다!';
+      }
+
+     // https://mondaymonday2.tistory.com/224
+     // 찾고자하는 목록 출력하기
+
+    
+     let list = ["iot학과", "건축시공과", "요리학과", "조경과"];
+     let search_name = prompt("학과조회", "조회할 학과를 입력하시오");
+
+     for(let i=0; i<list.lengh; i++){
+        if(search_name == list[i]){
+            document.write(Search_name + "학생이 맞습니다")
+        }
+     }
+
+
+    </script>
+</body>
+</html>

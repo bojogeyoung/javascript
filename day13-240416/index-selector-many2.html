@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>버튼여러개</title>
+    <style>
+ 
+
+    </style>
+</head>
+<body>
+
+<div>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <br>
+</div>
+        
+<div>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <br>
+           
+</div>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <br>
+        
+<div >
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <br>
+</div >
+
+    <script>
+        //버튼 12개 만들기 행열 3 * 4 
+        let btnsNodeList = document.querySelectorAll("button"); // 버튼 여러개를 찾아온다.   
+  
+
+        //querySelector()가 한 개의 요소를 반환했다면, 
+        //querySelectorAll()은 주어진 CSS 선택자와 일치하는 모든 요소를 반환한다. 
+        
+
+        //.length 배열의 길이를 알고자 할때 사용
+
+        //innerText와 innerHTML은 단순한 텍스트만 다룰 경우에는 차이가 없어 보입니다.
+        //이 두 속성은 다루는 값이 text element인지, html element인지에 따라 차이가 납니다.
+ 
+        
+
+        for (let i = 0; i<btnsNodeList.length; i++) //1. 전체 버튼의 길이 만큼
+         { 
+            if(i<9){
+                btnsNodeList[i].innerHTML = "버튼" + "0"+ (i+1); 
+
+           } else{
+                btnsNodeList[i].innerHTML = "버튼" + (i+1); 
+             }
+         }
+ 
+        //테스트 01. 각 열마다 배경색 바꾸기
+        //테스트 02. 각 열마다 폰트색 바꾸기 1열 gold, 2열salmon, 3열 seagreen, 4열 cadetblue 
+
+        changeColor("skyblue","red"); 
+        changeColor2("red","salmon"); 
+        changeColor3("blue","seagreen"); 
+        changeColor4("green","cadetblue"); 
+
+        function changeColor(color,font){
+            for(a=0; a<4; a++){
+            btnsNodeList[a].style.backgroundColor=color;
+            btnsNodeList[a].style.color=font;
+             } 
+         }
+
+         function changeColor2(color,font){
+            for(b=4; b<8; b++){
+            btnsNodeList[b].style.backgroundColor=color;
+            btnsNodeList[b].style.color=font;
+             } 
+         } 
+
+         function changeColor3(color,font){
+            for(c=8; c<12; c++){
+            btnsNodeList[c].style.backgroundColor=color;
+            btnsNodeList[c].style.color=font;
+             } 
+         } 
+         
+         function changeColor4(color,font){
+            for(d=12; d<16; d++){
+            btnsNodeList[d].style.backgroundColor=color;
+            btnsNodeList[d].style.color=font;
+             } 
+         } 
+
+
+//테스트 03. 4의 배수로 대각선 버튼이 마우스오버 되었을 때 크기가 110% 아웃되면 스케일 100%;
+          
+    
+        if(k % 4 == 0){
+            btnsNodeList[k].onmouseover=function(){
+               this.style.transform="scale(110%)"; 
+            }
+        }else{
+            btnsNodeList[k].onmouseout=function(){
+               this.style.transform="scale(100%)"; 
+        }
+    }
+
+
+
+ 
+
+
+        //    for(i=0; i<3; i++){           
+
+        //              for(k=0; k<3; k++){
+        //                 document.write("<button>버튼</button>"  );
+        //              }
+
+        //              document.write("<button>버튼</button>" + "<br>");   
+        //    }
+
+            // 
+
+         //  .innerHTML="버튼1"; //버튼사이에 들어가야 할 값을 지정할 수 있다?!
+
+        
+        
+           
+         // btnsNodeList = changeColor;
+            // function changeColor(color){
+            // changeColor.style.backgounrdColor="color";
+            // changeColor.style.Color="color";
+            // }
+        
+         
+            
+ 
+        // for(let i=0; i<btnsNodeList.lenght; i++){
+        //     this.style.transform="scale(100%)";
+        // }
+        
+            
+        // btnsNodeList[i].onmouseover=function(){
+        //     btnNodeList.style.transform="scale(110%)";
+        // };
+
+        // btnsNodeList[i].onmouseout=function(){
+        //     btnNodeList.style.transform="scale(100%)";
+        // };
+       
+    //     if(i%4==0){
+
+    //     btnsNodeList[i].onmouseover=function(){
+    //         btnNodeList.style.transform="scale(110%)";
+    //     }
+    //     else{  
+        
+    //     btnsNodeList[i].onmouseout=function(){
+    //         btnNodeList.style.transform="scale(100%)";
+    //     } 
+    //    }
+    //   }
+        
+ 
+
+        // let colNodeList= document.querySelectorAll(".a"); //child  상속자 개념으로 접근?
+
+        //      colNodeList = Color ;  //NodeList 개념? 
+
+        // function Color(){      
+        //     col.style.backgroundColor="gold";     
+        //     }
+
+        // btnsNodeList.onmouseover=function(){
+        //     btnNodeList.style.transform="scale(110%)";
+        // };
+
+        // btnsNodeList.onmouseout=function(){
+        //     btnNodeList.style.transform="scale(100%)";
+        // };
+
+
+         
+         
+         
+
+
+
+
+
+      
+ 
+
+ 
+
+        
+        
+    //      const col=10;  // const 변하지 않는 상수를 의미
+    
+    // let total=Number(prompt("전체 인원은?"));
+   
+    // let row = parseInt(total/col); //반올림 
+    
+    
+    // for(let j=0; j<row; j++)
+    // {  //2줄을 의미? 2열? => 2대신 row 
+
+    
+    //     for(i=0; i<10; i++)
+    //     {
+    //         // document.write("<br>");
+    //         document.write("<div>"+ (j+1) + "열" +(i+1)+"번</div>");   
+    //     }          
+    //          document.write("<br>");      
+    //     } 
+                
+  
+
+    </script>
+    
+</body>
+</html>

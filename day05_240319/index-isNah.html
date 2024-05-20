@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /* 문자가 입력되면 "숫자를 입력하세요"를 출력하시오 */
+        
+
+
+         
+        // let input = prompt("값을 입력하세요");
+        //값이 숫자로만 구성되면 ok. 아무것도 하지 않음.
+        //값이 문자가 구성되어 있으면 NG, alert으로 "숫자를 입력하세요"
+  
+        // let num = "2024a";
+        // document.write(isNaN(num));//Not a number true , 매개변수가 숫자인지 검사하는 함수 
+        
+        // inNaN(num);//isNaN("2024a) // true
+        //            //isNaN("2024") // false   Math.random(), parseInt("2024"), inNaN("abc")//true 
+        
+        let num = prompt("값을 입력하세요");
+        
+        if(isNaN(num) == true){
+            document.write("문자");
+            alert("숫자를 입력하세요");
+ 
+
+        } else{
+            document.write("숫자");
+        }
+        
+                   
+
+ 
+
+    num = parseInt(Math.random());
+        
+    </script>
+    
+</body>
+</html>

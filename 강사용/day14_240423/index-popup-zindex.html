@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>팝업 생성</title>
+    <style>
+        *{
+            list-style: none;
+            padding: 0px;
+        }
+       .gong{
+        width: 350px;
+        height: 200px;
+        /* background-color: aqua; */
+        border: 1px solid black;
+        border-radius: 30px 30px 0px 0px;
+        overflow: hidden;
+       }
+       ul{
+        width: 100%;
+        
+       }
+       /* ul>.date{ 
+        text-align: right;
+       } */
+       li{
+        line-height: 35px;
+        padding-left:5px;
+        padding-right: 5px;
+       }
+       .modal{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+       }
+       .popup{
+        width: 400px;
+        height: 250px;
+        background-color: yellow;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+       }
+       .title{
+        text-align: center;
+        padding-top: 15px;
+        
+        
+       }
+       .content{
+        padding: 10px;
+        text-align: justify;
+       }
+       #close{
+        position: relative;
+        left: 350px;
+        /* top: 0px; */
+       }
+       .modal, .popup{
+        display: none;
+       }
+       /* li:nth-child(2n){
+        background-color: gold;
+       } */
+       .date{
+        float: right;
+       }
+       .text{
+        text-overflow: ellipsis;  
+        overflow: hidden;   
+        color: deepskyblue   
+        seagreen
+       }
+       .background{
+        margin:0;
+        background-color:whitesmoke;
+       }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="gong">
+            <h3>공지사항</h3>
+                <ul>
+            <!-- <ul type = "none"> -->
+                <li><span class="text">한국투어 홈페이지 개편 안내 </span><span class="date">2022.03.01</span></li>
+                <li><span class="text">여행 이벤트 상품을 드립니다.</span><span class="date">2022.03.01</span></li>
+                <li><span class="text">렌트 이용 시 주의해주세요.  </span><span class="date">2022.03.01</span></li>
+                <li><span class="text">제주도 여행권 할인 안내     </span><span class="date">2022.03.01</span></li>
+            </ul>
+        </div>
+        <div class="modal"></div>
+        <div class="popup">
+            <div class="title"><h3>여행 패키지 이벤트 안내</h3></div>
+            <div class="content">
+                <p></p>명승지나 고적지를 한 국내 여행 패키지 상품이 출시되었습니다. 
+                여행 패키지 예약후 SNS에 공유한 사진을 보내주시면 추첨을 통해 국내 여행 패키지 
+                할이권을 드립니다. 많은 응모 바랍니다.
+            </p>
+            </div>
+            <button id="close">닫기</button>
+        </div>
+    </div>
+    <script>
+        let listTag = document.querySelectorAll("li");
+
+        for(let i = 0; i < listTag.length; i++){
+            listTag[i].onmouseover = function(){
+                this.style.fontWeight = "900";        
+                // listTag[i].style.fontWeight = "900";        
+                this.style.cursor = "pointer";       
+            };
+            listTag[i].onmouseout = function(){
+                this.style.fontWeight = "400";        
+            };
+            if(i % 2 == 1){
+                listTag[i].style.backgroundColor = "gold";
+            }
+        }
+        // let nthTag = document.querySelectorAll("li:nth-child(2n)");
+        // for(let i=0; i<nthTag.length; i++){
+        //     nthTag[i].style.backgroundColor = "gold";
+        // }
+        listTag[0].onclick = function(){
+            //첫번째 목록을 클릭하면, 팝업이 보여져야 함.
+            //전체 화면을 비활성화처럼 꾸며주자
+            //팝업을 만들자
+            let modal = document.querySelector(".modal");
+            modal.style.display = "block";
+            let popup = document.querySelector(".popup");
+            popup.style.display = "block";
+        };
+        let closeBtn = document.querySelector("#close");
+        closeBtn.onclick = function(){
+            let modal = document.querySelector(".modal");
+            modal.style.display = "none";
+            let popup = document.querySelector(".popup");
+            popup.style.display = "none";
+        };
+        
+        //DOM요소에 접근하고 속성 가져오기
+        let closeElement = document.getElementById("close");
+        closeElement.style.backgroundColor="red";
+        let dateElements = document.getElementsByClassName("date");
+        dateElements[0].style.color="red";
+        dateElements[1].style.color="seagreen";
+        for ( let i = 2; i<4; i++)
+        {
+            dateElements[i].style.color="red";
+        }
+
+    </script>
+</body>
+</html>

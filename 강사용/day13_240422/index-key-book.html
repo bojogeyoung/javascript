@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>교과서 합계 구하기</title>
+    <style>
+        label{
+            width: 100px;
+            display: inline-block;
+            
+        }
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p><label for="num"><span>*</span>학생수</label><input onkeyup="mykeyup()" type="number" name="num" id="num" required></p>
+    <p><label for="subject"><span>*</span>학과과목수</label>
+        <input type="number" name="subject" id="subject" required onkeyup="mykeyup()"></p>
+    <p><label for="total">전체교과서양</label>
+        <input type="number" name="total" id="total" readonly></p>
+        <p><input type="number" id="ex" name="ex" value="50"></p>
+    <script>
+        
+        function mykeyup(){            
+            let numTag = document.querySelectorAll("input");
+            // numTag[0];//학생수 input 
+            // numTag[0].value;//유저가 입력한 학생수.
+            // numTag[1];//학과과목 input
+            // numTag[1].value;//유저가 입력한 과목수.
+            if ( numTag[0].value=="" || numTag[1].value=="" )
+            {
+                return;
+            }
+            numTag[2].value = numTag[0].value * numTag[1].value;
+
+        }
+    </script>
+</body>
+</html>

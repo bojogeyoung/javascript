@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2. 사용자 아이디를 입력받아 
+        //아이디가 “student”이면 “<h1>환영합니다.</h1>”메시지를 출력하고 
+        //“student”가 아니면 “운영자가 아닙니다.”메시지를 출력하시오. 
+        //document.write()로 출력
+        //아이디가 student 이고 pw가 8888이면 "IoT과 학생입니다"
+        //그렇지 않으면 Iot과 학생이 아닙니다
+
+        let id = prompt("사용자 아이디를 입력해주세요");//id "haft","123456"
+        //id="haft";
+
+        if ( id == "student")//"haft" == "student"
+        {
+            let pw = prompt("비번을 입력해주세요");
+            if (pw == "8888")
+            {
+                document.write("IOt과 학생입니다.");
+            }
+            else
+            {
+                document.write("IoT과 학생이 아닙니다");
+            }
+            document.write("<h1>환영합니다</h1>");
+        }
+        else
+        {
+            document.write("운영자가 아닙니다.");
+        }
+
+    </script>
+</body>
+</html>

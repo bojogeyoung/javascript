@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>함수_function</title>
+</head>
+<body>
+
+    <script>
+       
+         
+        // 예제 : 아래와 같이 출력되도록 프로그래밍 하시오.
+        // 북부 5번, 기술교육원 5번, IOT 5번
+
+        
+        // for(name=0; name<5; name++){
+        //     let name="북부";
+        //     document.write(name +"<br>");
+        // }
+             
+    //   for(gisul=0; gisul<5; gisul++){
+    //         let gisul="기술교육원";
+    //         document.write(gisul +"<br>");
+    //     }
+
+    //     for(iot=0; iot<5; iot++){
+    //         let iot="IOT";
+    //         document.write(iot +"<br>");
+    //     }
+        
+
+      
+       //for문으로 여러 반복되는 것을 function문을 사용할 경우 
+       //for문은 name으로 불러와주면 여러번 반복할 수 있다?!!
+        repeat ("북부");
+        repeat ("기술교육원");
+        repeat ("IOT");
+
+        function repeat(str){
+            for(let i=1; i<6; i++){
+            document.write(i+"."+str +"<br>");
+            }
+        }
+
+
+        //참고 : https://bigtop.tistory.com/34
+
+
+       
+    
+
+    </script>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Web Programming</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>Web Programming</h1>
+        <p>공부할 주제를 기록해 보세요</p>
+        <p>공부가 끝난 것은 클릭해서 삭제할 수 있습니다</p>
+        <input type="text" id="text" autofocus>
+        <input type="button" id="btn" value="추가">
+        <hr>
+        <div id="addText">
+            
+        </div>
+        <script>
+            let inputs = document.querySelectorAll("input");
+            let divv = document.querySelector("#addText");
+            let newUl = document.createElement("ul");
+            let newLi;
+            
+            divv.appendChild(newUl);
+            
+            inputs[0].addEventListener("keydown",function(event){
+                if(event.keyCode==13){
+                let textText= inputs[0].value;
+                newLi = document.createElement("li");
+                let newText = document.createTextNode(textText);
+                newUl.appendChild(newLi);
+                newLi.appendChild(newText);
+                inputs[0].value="";
+                
+                let liList = document.querySelectorAll("li");
+                
+                for(let i =0 ; i<liList.length; i++){
+                    liList[i].onmouseover = function(){
+                        liList[i].style.cursor="pointer";
+                    }
+                    liList[i].addEventListener("click",function(){
+                    
+                    liList[i].parentNode.removeChild(liList[i]);
+                    
+                    
+                });//addEL (liList)
+                }//for문 
+                
+                }//keycode if 문
+               
+                
+                
+            }); //addEL(input[0])
+            inputs[1].addEventListener("click",function(){
+                let textText= inputs[0].value;
+                newLi = document.createElement("li");
+                let newText = document.createTextNode(textText);
+                newUl.appendChild(newLi);
+                newLi.appendChild(newText);
+                inputs[0].value="";
+                
+                let liList = document.querySelectorAll("li");
+                
+                for(let i =0 ; i<liList.length; i++){
+                    liList[i].onmouseover = function(){
+                        liList[i].style.cursor="pointer";
+                    }
+                    liList[i].addEventListener("click",function(){
+                    
+                    liList[i].parentNode.removeChild(liList[i]);
+                    
+                    
+                });//addEL (liList)
+                }//for문 
+
+
+
+
+            })
+            
+
+     
+                // getElementByID~("태그,클래스,아이디 표시 없이")
+                //getElementByClassName
+                //getElementByTagName
+                //querySelector("태그,클래스,아이디 표시 해야함")
+                //querySelectorAll"태그,클래스,아이디 표시 해야함") 
+               
+            
+
+        </script>
+    </body>
+</html>

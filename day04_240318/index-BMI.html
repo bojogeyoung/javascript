@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI 지수 구하기</title>
+</head>
+<body>
+
+   <script>
+    let height = prompt("키를 m단위로 입력하세요. 예)1.5");
+    let weight = prompt("몸무게를 입력하세요"); 
+    let BMI = weight/(height*height);
+
+    m1="<img src='js/비만이미지/m1.jpg'/>"+ "<br>" +
+       "<img src=js/비만이미지/18.jpg>"+"<br>"+"<img src=js/비만이미지/w1.jpg>"
+
+    m2="<img src='js/비만이미지/m2.jpg'/>"+ "<br>" +
+       "<img src=js/비만이미지/24.jpg>"+"<br>"+"<img src=js/비만이미지/w2.jpg>"  
+
+
+       
+    if(BMI<18.5){
+
+        document.write(m1);
+        
+        // document.write("<img src='js/비만이미지/m1.jpg'/>"+"<br>");
+        // document.write("<img src=js/비만이미지/18.jpg>"+"<br>");
+        // document.write("<img src=js/비만이미지/w1.jpg>");
+
+       // 또는 변수선언으로 한번에 간결하게? 
+       // m1="<img src='js/비만이미지/m1.jpg'/>"+ "<br>" +
+       // "<img src=js/비만이미지/18.jpg>"+"<br>"+"<img src=js/비만이미지/w1.jpg>"
+
+        // document.write("<br>"+"저체중");
+
+    } else if(BMI<24.9) // BMI >= 18.5 && BMI < 23 내용을 포함 둘다 true여서 && 가능
+
+        {   document.write(m2);
+            
+            // document.write("<img src=js/비만이미지/m2.jpg>"+"<br>");
+            // document.write("<img src=js/비만이미지/24.jpg>"+"<br>");
+            // document.write("<img src=js/비만이미지/w2.jpg>");
+            // // document.write("<br>"+"표준");
+        }
+ 
+    else if(BMI<29.9)
+        {
+            
+            document.write("<img src=js/비만이미지/m3.jpg>"+"<br>");
+            document.write("<img src=js/비만이미지/29.jpg>"+"<br>");
+            document.write("<img src=js/비만이미지/w3.jpg>");
+            // document.write("<br>"+"과체중");
+        }  
+    else if(BMI<34.9)
+        {
+              
+            document.write("<img src=js/비만이미지/m4.jpg>"+"<br>");
+            document.write("<img src=js/비만이미지/34.jpg>"+"<br>");
+            document.write("<img src=js/비만이미지/w4.jpg>");
+            // document.write("<br>"+"비만");
+
+        }     
+    
+     else if(BMI>35)
+        {
+           
+            document.write("<img src=js/비만이미지/m5.jpg>"+"<br>");
+            document.write("<img src=js/비만이미지/35.jpg>"+"<br>");
+            document.write("<img src=js/비만이미지/w5.jpg>");
+            // document.write("<br>"+"고도비만");
+        }  
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script> 
+</body>
+</html>
+
+
+
+
+ 
+
+

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>팝업창</title>
+        <style>
+            body{
+                z-index:1 ;
+                position: relative;
+            }
+            
+            ul{
+                width: 100%;
+                
+                 
+                
+            }
+
+            #pop{
+                border: 1px dotted #a1a1a1;
+                width: 300px;
+                height: 310px;
+                z-index : 2;
+                background-color : #fae630;
+                position: absolute;  
+                left : 30%;
+                display: none;
+            }
+
+            .img{
+                width: 100%;
+                 
+                 
+            }
+
+            .date{
+                float : right ;
+            }
+            .modal{
+                width: 100%;
+                height:1000px;
+                 
+                background-color: rgba(141, 139, 139, 0.828);
+                position: absolute;
+                top:0;
+                left:0;
+                z-index: 2;
+                display: none;
+            }
+
+            li{
+                width: 430px;
+                line-height: 1.5;
+                 
+                padding: 10px;
+                list-style-type : none;
+               
+                }
+
+            /* li:nth-child(2n){
+                background-color: rgb(236, 249, 250);
+            }    */
+            
+            hr{
+                width: 500px;
+                height: 10px;
+                float : left;
+                background-color: rgb(120, 231, 15);
+                border: none;
+            }
+
+            input{   
+                float : right;           
+            }
+
+            .s{
+                color: red;
+                /* text-overflow : ellipsis; */
+            }
+     
+            p{
+                text-align: center;
+            }
+
+  
+                
+        </style>
+    </head>
+
+    <body>
+        <h2>공지사항</h2>
+        <hr>
+        <br>
+        <ul>
+            <li>한국 투어 홈페이지 개편 안내<span class="date">2022.03.01</span></li>
+            <li>여행 이벤트 상품을 드립니다<span class="date">2022.03.01</span> </li>
+            <li>렌트 이용 시 주의해주세요<span class="date">2022.03.01</span></li>
+            <li>제주도 여행권 할인 안내<span class="date">2020.03.01</span></li>
+        </ul>
+        <div class="modal"></div>
+        <div id="pop">  
+             
+            <h2 style="text-align: center;">이벤트 안내</h2>
+            <a href="#"><img src="../../HTML_수/images/tangerines.jpg" alt="이미지" class="img"></a>
+            <p> 이벤트에 참여해주신 분들 중<br> <span class="s">선착순 100명</span> 귤 1box 드려요. <br>(이미지클릭!)</p> 
+           
+            <input type="button" id="btn" value="X 닫기">
+            <!-- value속성은 "초깃값 설정", 버튼 텍스트 변경, 양식 제출 등에 사용 -->
+
+
+        </div>
+
+
+
+        <script>
+            let liList = document.querySelectorAll("li");
+            let pop = document.querySelector('#pop');
+            let body = document.querySelector('body');
+            let gray = document.querySelector('.modal');
+
+            function popUp(){
+                pop.style.display = "block";//css에서 display :none; 한것을 보여주기 위해 block으로 지정
+                gray.style.display = "block";
+                  
+            }
+
+            // function bold(){
+            //     liList[0].style.fontWeight="bold";
+            //     onmouseout = function() {
+            //         liList[0].style.fontWeight="";
+            //     }
+            // }
+
+            for(let i=0; i<liList.length; i++){
+                liList[i].onmouseover = function(){
+                liList[i].style.fontWeight="bold";
+                // liList[i].style.fontWeight = "bold";
+                liList[i].style.cursor = "pointer";
+                onmouseout = function(){
+                    // liList[i].style.fontWeight="";
+                    liList[i].style.fontWeight="";
+                }//마우스 아웃
+             } //마우스 오버
+                
+              if(i%2==0){
+                    liList[i].style.backgroundColor="yellow";
+                }
+                
+            }
+
+            liList[0].addEventListener("click",popUp);
+            /*liList[0].addEventListener("mouseover",bold);
+            liList[1].addEventListener("mouseover",bold);
+            liList[2].addEventListener("mouseover",bold);
+            liList[3].addEventListener("mouseover",bold);*/
+            let btn = document.querySelector('#btn');
+            btn.onclick = function(){
+                pop.style.display = "none"; 
+                gray.style.display= "none";
+            }
+             
+
+            //DOM요소에 접근하고 속성 가져오기_
+            // let closeElement = document.getElementbyId("btn");  //닫기 버튼
+            // closeElement.style.backgroundColor="red";
+
+            let dateElement = document.getElementsByClassName("date");
+            dateElement[0].style.color ="red";
+            dateElement[1].style.color ="seagreen";
+         
+            for(let i=2; i<4; i++)
+            {
+                dateElement[i].style.color="red";
+            }
+
+            let textElement = document.getElementByTagName("li");
+            textElement.style.backgroundColor="red";
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title> p.541 키보드 이벤트</title>
+
+</head>
+<body>
+
+    
+    <input type="text" onkeydown="onkeydown(event)">
+    <script>
+
+        function onkeydow(){
+            let inputTag = document.querySelector("#input")
+            document.write("onkeydown");
+        }
+
+        function onkeyup(){
+            document.write("onkeyup");
+        }
+
+        function onkeypress(){
+            document.write("<br>onkeypress");
+        }
+
+
+
+
+
+
+
+        //이벤트 처리
+        //https://codingnuri.com/javascript-tutorial/html-dom-events-and-event-handling.html
+        //참고
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>극장예약시스템</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(39, 151, 5);
+        }
+        div {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #000;
+            background-color: rgb(178, 236, 85);
+            position: relative;
+            text-align: center;
+            color: #2e2e2e;
+            display: inline-block;
+            /* text-shadow: 2px 1px 3px #000; */
+        }
+
+        .result {
+            width: 350px;
+            height: 200px;
+            line-height: 200px;;
+            border: 1px solid #000;
+            background-color: rgb(186, 235, 11);
+            position: relative;
+            color: red;
+            font-size: 1.5em;
+            border-radius: 50%;
+            margin-left: 150px;
+            margin-top: 30px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>영화 극장 좌석 배치</h1>
+    <nav></nav>
+
+    <div class="result"></div>
+
+    <!-- <p>극장의 정원을 입력하세요.</p>
+    <p>입력된 값으로 임의의 행열을 구해서 테이블작성하기 </p> -->
+
+
+
+    <!-- 버튼, div, input -->
+
+    <script>
+        // totalNum = prompt("총 몇명인가요?");
+        let sero = 10;
+        let result = document.querySelector(".result");
+
+        let navs = document.querySelector("nav");
+        for (let i = 0; i < 35; i++) {
+            let divs = document.createElement("div");
+            navs.appendChild(divs);// nav 자식divs 추가
+
+            let divList = document.querySelectorAll("div");
+            let newText = document.createTextNode("좌석"+(i+1)+"번");
+            divs.appendChild(newText);
+            
+        
+            // divList[i].addEventListener("click", function(){
+            //     divList[i].style.backgroundColor="red";
+            //     result.innerHTML = "좌석" + (i+1) + "번이 예약 되었습니다";  
+                
+            //     divList[i].addEventListener("click",function(){
+            //         this.style.backgroundColor="rgb(178, 236, 85)";
+            //       });
+            //       // 클릭 중복시 애드 이벤트 리스너 안에  또 넣는다. 
+                
+            // });  
+ 
+            divList[i].addEventListener("click", function(){
+                const currnetColor = divList[i].style.backgroundColor;
+                let newColor;
+                if(currentColor == "red"){
+                    newColor ="";
+                    result.innerHTML = "좌석" + (i+1) + "번이 예약 되었습니다";  
+                }else{
+                    newColor = "blue"
+                } 
+
+               
+                
+                // divList[i].addEventListener("click",function(){
+                //     this.style.backgroundColor="rgb(178, 236, 85)";
+                //   });
+                  // 클릭 중복시 애드 이벤트 리스너 안에  또 넣는다. 
+                
+            });  
+ 
+          
+            const h1 = document.querySelector("div.hello:first-child h1");
+
+    // function handleTitleClick() {
+    //     const currentColor = h1.style.color;
+    //     let newColor;
+    //     if (currentColor === "blue"){
+    //         newColor = "tomato";
+    //     } else{
+    //         newColor = "blue";
+    //     }
+    //     h1.style.color = newColor;
+    // }
+
+    // h1.addEventListener("click", handleTitleClick);
+           
+
+                
+     
+
+            // divList[i].addEventListener("mouseout",function(){
+            //     divList[i].style.backgroundColor = "";
+            // })  
+
+    
+
+
+        }
+
+
+
+        //    let newDiv = document.getElementsByClassName("box");
+
+        //    for (let j = 0; j < newDiv.length; j++) {         
+        //         newDiv[j].addEventListener("click", onclick);
+        //       }
+
+        //    function onclick(){
+        //         let 
+        //    }   
+
+
+        //    newDiv.addEventListener("mouseover", changePic);
+
+
+        //    for (i = 1; i < 10; i++) { 
+        //               document.write(newDiv + (j+1) + "열" + i + "번 ");         
+        //           }
+
+        //this.style.backgroundColor="red";
+
+
+
+
+
+
+
+        // }
+
+        // 
+
+        //키이벤트   
+        //keydown: 사용자가 키를 누를 때 발생합니다.
+        //keyup: 사용자가 키를 뗄 때 발생합니다.
+        //keypress: 사용자가 키를 누르고 떼는 동작이 완료될 때 발생합니다.
+
+        // btn.addEventListener("click", function(event)){
+        //     if(event.keyCode == 13)
+        //  }
+
+
+        let btn = document.getElementsByTagName("div");
+        for (let a = 0; a < btn.length; a++) {
+
+            btn[a].addEventListener("mouseover", changePic);
+            btn[a].addEventListener("mouseout", changePic2);
+
+            function changePic() {
+                this.style.color = "blue";
+            }
+
+            function changePic2() {
+                this.style.color = "";
+            }
+        }
+
+
+        btn.addEventListener("click", function () {
+            alert("예약되었습니다.")
+        });
+
+
+
+
+
+
+        //onclick 이벤트 여러개 적용 불가능 /addEventListener 이벤트 여러개 적용 가능
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

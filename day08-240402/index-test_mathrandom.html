@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>가위바위보</title>
+</head>
+<body>
+   
+
+
+
+
+    <script>
+       
+         
+     
+        let comNum = parseInt(Math.random()*3); //컴퓨터가 제시한 값 0, 가위,
+        document.write('<br>'+comNum);
+
+        let imageArray = ['가위.png','바위.png','보.png']; //imageArray[0],imageArray[1],imageArray[2],
+        // document.write('<img src="images/"'+ imageArray[0]+' alt="">');
+        document.write('<img src=" ' + imageArray[comNum]+' " alt="속성 ' + comNum+' " >');
+         
+
+        let userNum = " " ; 
+        // prompt("가위, 바위, 보를 입력해서 게임을 진행하세요. 게임을 끝내려면 end를 입력하세요.");
+        // let num=0;
+
+        while(userNum != "end"){
+
+        
+
+
+        documnet.write('<input type="text" id="text" name="text">');
+
+
+
+
+        if(userNum == "가위")
+            num = 0 ;
+        else if (userNum == "바위")
+            num = 1 ;
+        else if (userNum == "보")
+            num = 2 ;
+        else if (userNum == "end")
+            break; 
+
+        }
+
+        document.write('<br>'+userNum); 
+        document.write('<br>'+num);
+
+
+
+        // 게임결과판단.
+        if(comNum == Num){
+            document.write('<br> + "무승부');
+        }
+
+
+        // function dWrite(함수가 일을 할 때 필요로 하는 재료){
+        //     return "고길동";
+        // }  
+
+        //함수 호출
+        dwrite();
+
+        dWritePara("함수임");
+        dWritePara("함수임1");
+        dWritePara("함수임2");
+        dWritePara("함수임3");
+        dWritePara("함수임4");
+   
+        function dWritePara(str){
+            document.write("<br>"+str);
+        }
+
+        //함수정의
+        function dWrite(){
+            document.write("<br>이것이 함수다!");
+        }
+
+
+
+
+
+
+
+
+ 
+
+
+        
+                
+
+
+
+        // 참고 : https://velog.io/@sypear/JavaScript-%EB%AF%B8%EB%8B%88%EA%B2%8C%EC%9E%84-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%80%EC%9C%84%EB%B0%94%EC%9C%84%EB%B3%B4
+         
+
+    
+
+    </script>
+    
+
+
+
+</body>
+</html>

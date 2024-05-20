@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>형변환필요</title>
+</head>
+<body>
+    <script>
+        //   let height = prompt("당신의 키는?");
+        // let temp = height + 30;
+        // alert(temp);
+
+        // let a = true; // 1, false=0을 의미
+        // let b = a + 5; 
+        // document.write(b);
+       
+
+        // b = !a -5;//0-5=-5
+        // document.write(b);
+
+        // let test1 = 15;
+        // let result = test1.toString();
+        // document.write("result = " + result );
+ 
+
+        //문자를 숫자로 숫자를 문자로 형변환 하기!!
+
+
+        // 미션 1
+
+        // 1. 숫자를 문자로 형변환 : toString() 사용
+        // 2. 변수 test에 들어있는 숫자 100을 문자형으로 변형해서 resulte에 대입
+
+        // let test2 = 100;
+        // result= test2.toString();
+        //toString => 문자 
+         //Console에서 typeof(test2) 결과 number(숫자의미), typeof(result)_결과로 확인하기
+
+        // document.write("result = " + result);
+        // document.write("<br>");
+
+
+        //미션 2
+        //1. 문자를 숫자로 형변환
+        //2. 문자형으로 된 숫자 값을 숫자형으로 변형해서 숫자 연산을 할 수 있게 만들어
+        //   주세요. 즉, 답은 270.50이 나와야 합니다.
+
+        let test="100.50";
+        test = Number(test);
+
+        let result=test+150+Number("20");
+        result=result.toFixed(2) // 소수점 두자리를 위해 tofixed(2)사용
+        
+        document.write("result= " + result);
+        document.write("12345'abcde'6789");
+
+
+
+        // 숫자형 = Number(변수), parseFloat(변수), parseInt(변수)
+
+
+         
+       
+
+
+
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            margin-top: 10px;
+            line-height: 100px;
+            text-align: center;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- onclick(), ondblclidk(), onmouseover(), onmouseout() -->
+    <button id="btn">나는 버튼!</button>
+    <div id="rect">
+        네모
+    </div>
+    <script>
+        function myDo(){
+            alert('클릭!');
+        }
+        let btn = document.getElementById("btn");
+        btn.onclick = function(){
+            this.style.backgroundColor="yellow";            
+        }
+        // btn.onmouseover의 이벤트 처리할수 있는 함수만들자.
+        // 하는 일은 글씨를 빨간색으로 변경해보자.
+        // btn.style.color="red";
+        
+
+        //네모위에 마우스 오버되면 백그라운드 색을 gold로 셋팅하자.
+        //1. 요소 찾기, id rect찾아서
+        //2. 변수에 할당 (이제부터 변수는 해당 요소를 대신해서 JS에서 사용됨)
+        //3. 변수로 핸들링. 백그라운드 색을 gold로 지정하자.
+        //4. 네모의 크기를 키워주자.
+            // 네모.style.scale="150%";
+            //네모.cursor="pointer"
+
+    </script>
+</body>
+</html>

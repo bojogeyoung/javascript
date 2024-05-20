@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>키이벤트</title>
+    </head>
+    <body>
+        <!-- onkeypress="onkeypress()" -->
+        <input id="input" name="input" type="text" onkeydown="onkeydown(event)" onkeyup="onkeyup(event)" >
+        <br>
+        <script>
+            let inputTag = document.querySelector('#input');
+            function onkeydown(event){  
+                alert("1")                  ;
+                if ( event.key == "Enterkey")
+                {                                       
+                    inputTag.style.backgroundColor="red";
+                }
+            }
+
+        </script>
+    </body>
+</html>

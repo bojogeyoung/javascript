@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+ <!--  사용자 아이디를 입력받아
+        아이디가 "student"이고 비번이 888이면 "<h1>환영합니다. IOT과 학생입니다.</h1>"메시지를 출력하고
+        "student"가 아니면 "운영자가 아닙니다." 메시지를 출력하시오.
+        document.write()로 출력 -->
+
+
+    <script>
+
+        let ID = prompt("아이디를 입력하시오");
+        let PW = parseInt(prompt("비번을 입력하시오"));
+
+        // switch(ID && PW){
+
+        //     case "student" && 8888 :
+        //     document.write("<h1>환영합니다. IOT과 학생입니다. </h1>");
+        //     break;
+
+        //     default :
+        //     document.write("IOT과 학생이 아닙니다.");
+        // } // 안됨
+
+
+        //if~ else 로 바꾸면? 
+
+        let id = prompt("아이디를 입력하시오");
+        let pw = parseInt(prompt("비번을 입력하시오"));
+
+        if(id == "student" && pw == 8888 )
+        { 
+           
+            document.write("<h1>환영합니다. IOT과 학생입니다. </h1>");
+       
+        } else{
+            document.write("IOT과 학생이 아닙니다.");
+        }
+
+        
+
+
+        // let id = prompt("아이디를 입력하시오");
+        
+
+        // if(id == "student")
+        // { 
+        //     let pw = prompt("비번을 입력하시오");
+        //     if(pw == "8888")
+        //    { 
+        //     document.write("<h1>환영합니다. IOT과 학생입니다. </h1>");
+        //    }
+        // } else{
+        //     document.write("IOT과 학생이 아닙니다.");
+        // }
+        // 이 방법은 student로 잘못입력되면 비번으로 안넘어간다.
+      
+
+
+    </script>
+    
+</body>
+</html>

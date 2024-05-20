@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+  
+        //P.530 재사용성 : 함수를 실행하는데 필요한 값을 함수 밖에서 제공하는 것
+
+        // function addNumber(num1, num2){ // num1, num2를 매개변수(파라메터)라고 함
+        //     let sum = num1 + num2 ; // 1. 여기까지만 하면 두수를 더한 sum값은 함수 안에만 있게 된다.
+        //                         // 결과값을 함수 밖에서 사용하려면 함수를 실행한 위치로 돌려줘야 한다. 즉 값을 반환한다. 
+        //     return sum; // 2. 예약어 return을 사용해 넘겨줄 값 지정하기 
+
+        // }
+
+        // let result = addNumber(2,3); // 3. 함수를 호출한다. 2,3을 인수라고 한다. 함수 실행이 모두 끝나면 결괏값 sum을 함수 호출 위치
+        //             // 즉, let result로 넘긴다. 
+        // document.write("두 수를 더한 값: " + result); // 4. result에 있는 값을 화면에 띄운다.
+
+        // p.532 1부터 n까지 숫자를 더하는 함수
+
+        // 함수호출
+        let userNumber = prompt("얼마까지 더할까요?");
+            if(userNumber !== null){
+                calcSum(parseInt(userNumber));
+            }    
+
+        // 함수정의
+        function calcSum(n){
+
+
+            let sum = 0;
+
+            for(let i=1; i < n+1; i++){
+                sum += i;
+            }
+
+            document.write("1부터 " + n + "까지 더하면 " + sum);
+        }
+
+
+
+    </script>
+</body>
+</html>

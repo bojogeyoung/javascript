@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>Document</title>
+</head>
+ 
+
+<body>
+        <script>
+            
+            //13-3 간단한 기본 입출력 방법 p.449
+            alert("안녕하세요?"); // 1. 알림창
+            confirm("이미지를 바꾸시겠습니까?") // 2. 확인 창
+            let name =  prompt("이름을 입력하세요", "홍길동"); //3. 프롬프트 창에서 입력 받기 "" 두개로 사용하면 홍길동이 예시로 뜸
+            document.write(name + "님 <h1>환영합니다.</h1>") //4. 웹 브라우저 화면에 출력, HTML 태그도 함께 사용가능
+            console.log(name + " 님 환영합니다."); //5. 콘솔 창에 출력 / 콘솔창에서는 소스 코드 오류 발견 및 변숫값을 확인가능, HTML 태그 사용불가
+
+            // p.465 변수서언 방법 :  예약어 이름 예) let name;
+            // 변수 한꺼번에 선언 : let name, age, numer  => ,로 구분해서 여러개 선언
+            // 변수 선언과 값 할당
+                // let birthYear;
+                // birthYear = 1995 ; 
+            
+            // 예제 나이 계산 프로그램 만들어보기
+            let currnetYear = 2024;  // 기준연도    
+            let birthYear;           // 태어난 연도   
+            let age;                 // 저장할 나이
+
+            birthYear = prompt("태어난 연도를 입력하세요. (YYYY)","1900");
+            age = currnetYear - birthYear + 1 ;
+            document.write(currnetYear + "년 현재<br>");
+            document.write(birthYear + "년에 태어난 " + name + "님 나이는" + age + "세 입니다");
+
+
+            //p.468 자료형(data type) 이해하기 
+            // 기본유형 : 숫자(number), 문자열(String), 논리형(boolean) 
+             document.write("<span style='color:blue'>", "Do it", "</span"); // 큰 따옴표 안에  작은 따옴표 표기
+           
+           
+            // 복합유형 : 배열(예)let seasons = ['봄','여름','가을',[겨울]], 객체 (함수와 속성 함께 포함: 예) let date = new Data();)
+            // 특수유형 :  undefined(변수선언만 하고 값을 할당하지 않은 변수), null(값이 유효하지 않음)
+            
+
+
+
+        </script>
+
+
+
+</body>
+</html>

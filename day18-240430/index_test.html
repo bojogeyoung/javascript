@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>p.569</title>
+    <style>
+        *{
+            margin: 0 auto;
+             
+        }
+
+  
+        .box{
+            width: 300px;
+            height:300px;
+            border: 1px solid #000;
+            
+            
+
+        }
+
+        .time{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgb(87, 175, 233);
+            margin: 0 auto;
+            
+            text-align: center; 
+            line-height: 200px;
+            color: #fff;
+            font-size: 36px;
+ 
+            }
+
+        h1{
+            padding-top: 20px   ;
+            text-align: center;
+        }    
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>수료까지 </h1>
+   
+        <div class="time"> </div>
+
+    </div>
+
+    <script>
+        //수료까지 D데이값 구하기 
+
+        let date = new Date(); // 오늘날짜를 얻을 수 있음. 데이트 객체를 얻고 
+        let datetime = date.getTime(); // 오늘날짜 기준 밀리세컨 받아오기
+
+        let dateDDay = new Date("2024-07-16"); // 날짜 지정하기 
+        let dateDDayTime=dateDDay.getTime(); // 지정한 날짜 기준 밀리세컨 받아오기
+
+        let diffTime=(dateDDayTime-datetime); //  지정한날짜 밀리세컨 - 오늘날짜 기준 밀리세컨 = 디데이 밀리세컨
+ 
+        
+        let si  = parseInt((diffTime / (1000*60*60))/24);
+        let bun = parseInt((diffTime / (1000*60))/60);
+        let cho = parseInt((diffTime / 1000) / 60);
+ 
+        //1초 = 1000ms
+        //1분 = 60초
+        //1시간 = 60분
+        //1일 = 24시간
+        
+        // document.write(si + "시" +"<br>");
+        // document.write(bun + "분" +"<br>");
+        // document.write(cho + "초" +"<br>");
+        //document.write(diffTime + "<br>"); //디데이 밀리세컨 보여주기
+        
+        
+       let divs = document.getElementsByClassName("time");
+       divs[0].innerHTML = "D-" + si + "일";
+
+ 
+
+       
+
+      
+
+    //참고 : https://m.blog.naver.com/soseoga/221340450369
+
+    </script>
+    
+</body>
+</html>

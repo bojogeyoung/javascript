@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+    .rect{
+        width: 500px;
+        height: 500px;
+        background-color: antiquewhite;
+        z-index: 1;
+        position : relative;  /* 빨간원의 기준점을 잡음. */
+       
+    }
+
+
+      .circle{
+        width: 50px;
+        height : 50px ;
+        background-color: red;
+        border-radius : 50%;
+        z-index : 2;
+        position : absolute;
+      }  
+
+
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="rect" tabindex="1">
+
+        <div class="circle" tabindex="2"></div>
+
+    </div> 
+    <!-- tabindex = 1  탭키 작동 순서 1,2... -->
+    <!-- 포커스가 갈 수 있게 tabindex 지정 -->
+   
+
+    <script>
+        let circleTag = document.querySelector(".circle");
+        let x = 0, y = 0;
+        const  UNIT=10;
+        const CIRCLE_W = 50;
+
+        document.querySelector(".rect").onkeydown = function (event) {
+            //.querySelector() =>괄호 안에 어떤걸 기준으로 할지 결정하면 됨?!
+            if (event.keyCode == 40 && (y<=500-UNIT-CIRCLE_W)) {
+                //아래쪽 화살표/  38 위쪽 화살표 39 
+                //원을 오른쪽으로 10px만큼 움직이자.
+                y = y + 10;
+                circleTag.style.top = y + "px";
+                alert("1" + x);
+
+            } else if (event.keyCode == 37) //왼쪽 화살표
+            {
+                x = x - 10;
+                circleTag.style.left = x + "px";
+                alert("3" + x);
+
+            } else if (event.keyCode == 38 && (y>=0+UNIT && y<=500)) //위쪽 화살표
+
+            {
+                y = y -10;
+                circleTag.style.top = y + "px";
+                alert("3" + y);
+            } else if (event.keyCode == 39) //오른쪽 화살표
+            {
+                x = x + 10;
+                circleTag.style.left = x + "px";
+                alert("4" + x);
+
+            }
+
+
+        }
+
+           //키코드 참고 : https://blog.outsider.ne.kr/322 
+
+        
+        
+        
+        
+        
+        
+        
+        */
+
+
+
+     
+
+    </script>
+
+
+
+</body>
+
+</html>

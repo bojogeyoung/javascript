@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <title>event</title>
+    <style>
+        /* button{
+
+        }     */
+    </style>
+</head>
+<body>
+    <button onmouseout = 'changeColor("")' onmouseover="changeColor('red')" onclick="alert('알림입니다');">버튼</button>
+    <script>
+        function myAlert(){
+            alert("알림입니다");
+        }
+        function changeColor(color)
+        {
+            //버튼태그를 갖고와서, 해당 변수로 할당해주고, 버튼을 핸들링한다.
+            let btn = document.querySelector("button");
+            btn.style.backgroundColor=color;
+        }
+        // function changeColor2()
+        // {
+        //     //버튼태그를 갖고와서, 해당 변수로 할당해주고, 버튼을 핸들링한다.
+        //     let btn = document.querySelector("button");
+        //     btn.style.backgroundColor="";
+        // }
+        
+    </script>
+</body>
+</html>

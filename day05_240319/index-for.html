@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+    <meta charset="UTF-8">
+   
+    <title>for문</title>
+ </head>
+ <body>
+
+
+   <script>
+    //  let a;
+    //  let sum = 0;
+
+    //  for(a =1; a<6; a++) // (초기값, 조건, 증가식)
+    //  {
+    //     sum += a;
+    //  }
+    //  document.write("1부터 5까지 더하면" + sum);
+
+
+//중첩된 for문 사용하기
+     //구구단
+     document.write("[구구단]"+"<br>");
+     let i, j
+
+    for(i=1; i<=9; i++){
+        document.write("<h3>" + i + "단</h3>");
+        for(j=1; j<=9; j++){
+        document.write(i + "X" + j + "="+ i*j + "<br>");    
+        }
+
+
+    }
+
+    // 1부터 10까지 짝수만 더하기
+    document.write("[짝수끼리 더하기]"+"<br>");
+    let t;
+    let n=10;
+    let sum = 0;
+
+    for(t = 1; t <= n; t++)
+    {
+        if(t % 2 === 1)
+         continue
+        sum += t;
+        document.write(t + "--------" +  sum + "<br>");
+    }
+
+
+    // 자리배치도 만들기
+    let l, m
+    for(l=0; l < rowNum; l++){
+        
+    }
+
+
+
+//    for(let i=0; i<0, i++)
+//    {
+//     document.write("<br>")
+//    }
+//    document.write("<br>")
+
+//    for(let j=0; j<10; j++)
+//    {
+//     for(let i=0; i<5; i++)
+//     {
+//         document.write("마이콜");
+//     }
+//     document.write("<br>")
+
+//    }
+
+  //몇 줄의 표를 만드시겠습니까?
+  //10
+  //반복문에서 <tr>태그를 10개 만들기
+  //1줄에 <td>가 2개 배치 될 수 있게 하자.  
+
+
+    // for문으로 표 만들기?!
+
+ document.write("<table border='1'>");
+    
+ for(let i=0; i<10; i++) //열? 
+ {
+    document.write("<tr>");
+
+    for(let j=0; j<5; j++) //행
+    {
+    document.write("<td>");
+        document.write(i,j);
+    document.write("<td>");    
+    }
+ document.write("<tr>");
+}
+    document.write("<table");
+
+   </script>
+
+
+
+
+
+
+    
+ </body>
+ </html>

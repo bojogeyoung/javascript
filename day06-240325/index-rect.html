@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>좌석예약시스템</title>
+
+    <style>
+
+        /* *{
+            margin: 0;
+        } */
+        body{
+            width:1080px;
+        }       
+        div{
+            border : 1px solid #eee;
+            background-color:gold ;
+            width: 100px;
+            height : 100px;
+            line-height: 100px;
+            text-align: center;
+            margin-right: 5px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+      
+    <script>  
+     
+        //전체 입장인원은? (1줄은 10열, A열 01번, A열 10번)
+        //각 좌석은 네모1개 할당
+        
+   //세로는 colum 가로는 row   
+   
+    const col=10;  // const 변하지 않는 상수를 의미
+    
+    let total=Number(prompt("전체 인원은?"));
+   
+    let row = parseInt(total/col); //반올림 
+    
+    
+    for(let j=0; j<row; j++)
+    {  //2줄을 의미? 2열? => 2대신 row 
+
+    
+        for(i=0; i<10; i++)
+        {
+            // document.write("<br>");
+            document.write("<div>"+ (j+1) + "열" +(i+1)+"번</div>");   
+        }          
+             document.write("<br>");      
+        } 
+                
+    </script>
+</body>
+</html>

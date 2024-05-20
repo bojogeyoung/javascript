@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>함수/title>
+</head>
+<body>
+
+      <h1>넓이 구하기</h1>
+    <script>
+        let width2;
+        let height2; 
+        //함수정의
+        //함수명 input()
+        //유저에게 값을 받음
+        //파라미터, 함수의 재료 : width, height 2개.
+        //반환값, 리턴값 : 없음.
+
+        function input(str, str2){ // 파라미터를 두개 받는다. 
+            width2 = parseInt(prompt(str + "가로의 길이를 입력하세요"));
+            height2 = parseInt(prompt(str2 + "세로의 길이를 입력하세요"));        
+        } 
+
+        //  let width = parseInt(prompt("가로의 길이를 입력하세요"));
+        //  let height = parseInt(prompt("세로의 길이를 입력하세요"));
+        
+        //함수호출 
+        input("가로","세로"); //인자로 "가로", "세로"
+        //input(1,2);
+
+         let area = areaRect (width, height) ;
+         document.write("직사각형의 넓이는 " + area + "입니다.");
+       
+        // let width = parseInt(prompt("가로의 길이를 입력하세요"));
+        // let height = parseInt(prompt("세로의 길이를 입력하세요"));      
+         
+        
+
+        //함수정의
+        //함수명 : areaRect()
+        //파라미터(매개변수) : width, height 2개
+        //리턴값, 반환값 : 넓이를 값을 반환함.
+
+        function areaRect(width, height)
+        {
+            return width * height; // 넓이 반환
+
+        }
+
+
+        //삼각형의 넓이를 구하시오.
+        
+
+        
+
+        //입력을 받아서 출력을 내보낼 때, 함수 내부로 전달 받은 변수를 매개변수(parameter), 
+        //입력을 인수=인자(argument), 출력을 반환값(return value)라고 한다.
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        ///////////////////////////
+        let i = 5, j = 2, k;
+        k = sub(i, j);
+        document.write(k);//3
+
+        //필요한 함수를 정의하시오
+        function sub(n1, n2)
+        {
+            return n1-n2;//5-2
+        }
+
+        ///////////////////////////
+        let result;
+        result = pow(3);
+        document.write("3x3="+result);
+
+        //필요한 함수를 정의하시오.
+        function pow(number)
+        {
+           return number*number;
+        }
+
+
+        /////////////////////////
+        let age=0;
+        //age값을 28로 할당될수 있도록 함수를 호출.
+        age = setAge(8);//28
+
+
+        function setAge(a)
+        {
+            return a+20;//28
+        }
+
+        //////////////////////
+
+        let student = ['마이콜', '맛좋은라면', 
+        '꼬불꼬불', '연탄'];
+
+        print(student);
+
+        function print( array )
+        {
+            // document.write("<br>"+ array[0]);
+            // document.write("<br>"+ array[1]);
+            // document.write("<br>"+ array[2]);
+            // document.write("<br>"+ array[3]);
+            console.log(typeof(array));//array의 타입은 object
+            for ( let i = 0 ; i<array.length;i++)
+            {
+                document.write("<br>"+array[i]);
+            }
+
+        }
+
+
+
+        //필요한 함수를 정의하시오.
+        // student[i]로 접근해서 값을 모두 출력할 수 있도록한다
+        /*
+        마이콜
+        맛좋은라면
+        꼬불꼬불
+        연탄
+        */
+
+        printDo(student, "!");
+        /*
+        마이콜!
+        맛좋은라면!
+        꼬불꼬불!
+        연탄!
+        */
+       //위와 같이 출력될 수 있도록 함수를 정의하자
+        function printDo(array, mark)
+        {
+            for ( let i = 0; i<array.length;i++)
+            {
+                document.write("<br>"+ array[i] + mark);
+            }
+        }
+       /*
+       깐따삐야?!
+       엄마?
+       와 같이 출력 될 수 있도록 호출해보자
+       printDo()함수 활용해서 호출해보자.
+       */
+    </script>
+</body>
+</html>

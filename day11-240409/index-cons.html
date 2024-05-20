@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        // let a = 5;
+        // //var b = 6;
+        // const PI=3.14;
+        // //PI=3.141592;//PI는 const라서 또 값 할당이 안됨. 상수라고 불림.
+        // const version=1.0;
+
+        // input("가로","세로");
+        // input("밑변","높이");
+
+        //const는 변하지 않는 값을 변수로 선언할 때 사용하는 예약어
+        //const로 할당한 변수는 재선언하거나 재할당할 수 없으며
+        //let예약어를 사용한 변수처럼 블록레벨의 스코프를 가진다. 
+        //값이 자주 바뀌는 변수는 let예약어 사용, 재할당이 없는 변수라면 const 예약어 사용하기 
+
+        function sample() {
+            let sum = 0;
+            let count = 1;
+
+            //무한루프 시작
+            while (true) {
+                let value = parseInt(prompt("수 입력", 1));
+                if (value == 0) {
+                    document.write("종료합니다.");
+                    return;
+                }
+
+                //입력 값 더하기
+                sum += value;
+
+                //입력 값 출력하기
+                document.write(count + ". " + sum + "<br>");
+                count++;
+
+            }
+            document.write("총 " + count + "번 실행했습니다.");
+
+        }
+        sample();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

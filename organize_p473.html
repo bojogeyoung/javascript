@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>p.473 배열~</title>
+</head>
+ 
+
+<body>
+        <script>
+            //p.473 배열 : 하나의 변수 값에 여러개 저장
+            // 배열명 ["값1", "값2", "값3"...]
+            let spring = "봄";
+            let summer = "여름";
+            let fall = "가을";
+            let winter = "겨울";
+
+            // 위에처럼 하면 불편하다 그래서 배열을 사용하는게 편안함
+
+            let season = ["봄", "여름", "가을", "겨울"];
+            document.write(season[3]); 
+
+            //if(){ 조건 결과값이 true일 때 실행할 명령}
+            //if(){조건 결과값이 true일 때 실행할 명령}else{조건 결과값이 false일 때 실행할 명령}
+            //if문 3의 배수 확인하기    
+            let userNumber = prompt("숫자를 입력하세요.");
+
+            if(userNumber !== null){ // 입력이 null이 아니면  if~else 문 실행 , 취소 버튼을 누르면 else로 넘어감
+               
+                if(userNumber % 3 == 0)
+                    alert("3의 배수입니다.");
+                else    
+                    alert("3의 배수가 아닙니다.");
+            }
+             else 
+              alert("입력이 취소되었습니다."); 
+
+             // p.483 조건연산자 : 조건이 하나이고 true일 때와 false일 때 실행할 명령이 각각 하나뿐이라면
+             // if~else 대신 조건 연산자를 사용한다.
+
+
+
+        </script>
+
+
+
+</body>
+</html>

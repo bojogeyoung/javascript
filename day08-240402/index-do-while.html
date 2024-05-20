@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>do-while문</title>
+</head>
+
+<body>
+    <script>
+        // do{
+
+        // }while(조건식);
+
+        //id와 pw를 받아서 id="iot"이고 pw는 "8888"이면
+        //"go~!" alert()을 보여주자.
+        //아니면 다시 로그인 정보를 받아보자. 
+
+        // while문은 조건이 true인 동안 명령을 반복. 우선 조건부터 체크
+        // do~while문은 조건이 맨 뒤에 붙는다. 우선 명령을 실행한 후 조건을 체크
+
+        // let id = "";
+        // let pw = "";
+
+        // do{
+        //     id = prompt("id를 입력하세요");
+        //     pw = prompt("pw를 입력하세요");
+
+        //     if(id == null || pw == null) 
+        //     break;
+
+        // } while(!(id == "iot"  && pw =="8888"));
+
+        // //id와 pw의 값이 일치해서 go~!
+        // document.write("<br>go~!");
+
+        // //크롬 디버깅 모드에서 과정 확인해보기
+
+        // 구구단 만들기 , break; countine;
+        // let i, j;
+
+        // for (i = 1; i <= 9; i++) {
+
+        //     if (i % 2 == 1) continue; // 위에 두면 3단을 제외하고 9단까지 됨. 해당되는 조건이 제외됨
+
+        //     document.write("<div>");
+        //     document.write("<h3>" + i + "단</h3>");
+
+        //     for (j = 1; j <= 9; j++) {
+        //         document.write(i + " X " + j + " = " + i * j + "<br>");
+        //     }
+        //     document.write("</div>");
+
+        //     // if(i === 3) break;  아래에 두면 3단까지만 됨. 즉 해당되는 조건까지 출력됨
+        // }
+
+        // 구구단의 합 구하기, 짝수의 합 구하기 sum변수 누적변수    : 누락 됨 다시 풀기!!
+        // let i=0, j=0;
+        // let sum=0; // 1. 누적변수 선언 
+        // let sum2=0
+        
+        // for (i = 1; i <= 9; i++) {
+        
+        //     // if (i % 2 == 0) continue; 
+
+        //     document.write("<div>");
+        //     document.write("<h3>" + i + "단</h3>");
+
+        //     for (j = 1; j <= 9; j++) {
+        //         sum=sum+(i*j); //2. 세부적인 계산은 for문안에 for문에 넣는다?!, 0인 sum에 i와 j의 곱의 합을 더해 누적해서 총 합계 출력
+        //         document.write(i + " X " + j + " = " + i * j + "<br>");
+                
+        //     }
+            
+        //     document.write("</div>");
+        //     document.write("합계는 " + sum+"<br>");
+        //     document.write("짝수의 합은 " + sum2);
+    
+
+
+        //     if(i%2 == 0);
+        //     {
+        //         document.write("짝수의 합은 " + sum2);
+    
+        //     }
+        //      if(i === 2) break;  
+        // }
+
+          // 입력 받은 수를 모두 합하여 결과를 누적하다가 "end"가 입력되면 출력하기. 다시풀기
+ 
+
+        // do{
+        //     a=parseInt(prompt("1번째 입력"));
+        //     b=parseInt(prompt("2번째 입력"));
+        //     c=parseInt(prompt("3번째 입력"));
+
+ 
+        // }while("end"); 
+        //     document.write("end");
+        
+        //비교값, max,min값 찾기
+        // min=100, max=0의 초기값으로 선언하자.
+        // 프롬프트를 통해 값을 2개 받아 num1, num2변수에 담자
+        // num1과 num2의 값을 비교해서 둘중에 작은 값을 min변수에 담자
+        // num1과 num2의 값을 비교해서 둘중에 큰 값을 max에 담자
+        // min, max값을 출력하자
+        
+        let min=100;
+        let max=0;
+        
+
+        let num1=parseInt(prompt("1번째 입력"));
+        let num2=parseInt(prompt("2번째 입력"));
+
+            
+        if(num1<num2){
+            document.write(min);
+        }else{
+            document.write(max);
+        }
+
+
+
+
+
+
+
+
+        // countinue
+
+        // for (let i = 0; i < 3; i++) {
+        //     if (i == 1) {
+        //         // break;
+        //         continue;
+
+        //     }
+        //     document.write("<br>" + i);
+
+        // }
+
+
+
+
+    </script>
+</body>
+
+</html>

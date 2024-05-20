@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>매개변수</title>
+</head>
+<body>
+
+    <script>
+        let num1 = prompt("숫자 입력하세요");
+        let num2 = prompt("숫자 입력하세요");
+        let ret = add(num1,num2);//리턴하는 값이 있어서 변수에 담음.
+        document.write(ret);
+
+        ret = add(10, 20);
+        document.write(ret);
+
+        ret = add(6, 8);
+        document.write(ret);
+
+        function add(n1, n2)
+        {
+            let result = parseInt(n1)+parseInt(n2);
+            return result;
+        }
+
+        ret = minus(20);
+        document.write(ret);
+
+        function minus ( c )
+        {   
+            
+            let result = c-10;
+            return result;
+        }
+
+        //매개변수 3개
+        //하는일은 3개의 매개변수를 곱해서 값을 반환하자.
+        //mul()
+        function mul( a, b, c)
+        {
+            return a*b*c;  //1*2*3          
+        }
+
+        ret = mul(1, 2, 3);
+        document.write(ret);
+
+
+
+    </script>
+</body>
+</html>

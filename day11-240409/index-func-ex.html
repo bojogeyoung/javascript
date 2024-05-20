@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function hello(name) {
+        //     document.write(name + "iot");
+        // }
+        // hello("javascript");
+
+        // let func = hello;
+        // func("javascript");
+
+        // let myfunc = hello;
+        // myfunc("javascript");
+
+
+
+        // function prinStar(count) {
+         
+        //     for (let i=0; i<count; i++) { //*****count개수만큼 *출력          
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // printStar(3);
+        // printStar(3);
+        // printStar(3);
+
+        // let yourFunc = printStar;
+
+        // yourFunc(4);
+        // yourFunc(4);
+        // yourFunc(4);
+        // yourFunc(4);
+        // yourFunc(4);
+
+
+        //익명함수 : 이름을 붙이지 않는다.
+        let sum = function (a,b){
+            return a+b;
+        }
+        document.write("<br>"+sum(1,2));
+
+        //즉시실행함수 : 한번만 실행하는 함수, 익명함수 즉시실행 방법, 함수정의 전체를 ()로 묶어주었음.
+        (function(){
+            document.write("<br>iotiotiot");
+        }()      );
+
+
+        //매개변수 있는 익명함수의 즉시실행방법.
+        (function(a,b,c){
+            return a+b+c;
+        }(2,3,4));
+        
+
+        //익명함수
+        document.write("<br>hello");
+        document.write(a*b-c);
+
+        // //즉시실행함수 예제
+        // (function(){
+        //     let userName = prompt("이름을 입력하세요.");
+        //     document.write("안녕하세요?<span class='accent'>" + userName + "</span>님!");
+        // }());
+        // document.write("<br>");
+       
+        // //매개변수가 있는 즉시 실행 함수 예제
+        // (function(a,b){ //매개변수
+        //     sum = a + b;
+        // }(100, 200)); //인수
+        // document.write("함수 실행 결과 : " + sum);
+
+    </script>
+</body>
+
+</html>

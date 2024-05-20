@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>switch 명령문</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // let value = "바나나";     
+        //     
+
+        // switch(value) 
+        //     {
+        //     case "바나나":
+        //         document.write("바나나 <img src='js/과일이미지/banana.jpg' alt='banana'>");
+        //         break;
+
+        //     case "사과":   
+        //         document.write("사과 <img src='js/과일이미지/apple.jpg' alt='apple'>");
+        //         break;
+
+        //     case "딸기"
+        //         document.write("딸기 <img src='js/과일이미지/strawberry.jpg' alt='strawberry'>");
+        //         break;
+
+        //     case "키위"
+        //         document.write("키위 <img src='js/과일이미지/kiwi.jpg' alt='kiwi'>");
+        //         break;
+
+        //     case "참외"
+        //         document.write("참외 <img src='js/과일이미지/melon.jpg' alt='melon'>");
+        //         break;
+
+        //     default:
+        //         document.write("유효하지않음");
+        // }
+
+
+        // 경품추첨기 만들기
+
+        // 스타트 버튼
+        // let start = prompt("행운을 빌어요~"); 
+
+        let val = 0;
+
+        /*
+        0 : 노트북
+        1 : 청소기
+        2 : 컴퓨터
+        3 : 트럭
+        4 : 건조기
+        5 : 도깨비방망이
+        6 : 한우세트
+        7 : 그래픽카드
+        8 : 비트코인
+        9 : 머니
+        10 : 자전거
+        11 : 집 
+        */
+
+        // 0 < = Math.random()<1 //랜덤숫자를 뽑아주는 명령어
+        // 0*12 <= Math.random()*12 < (1*12)
+
+        //0<=                     <12
+
+
+
+        document.write(parseInt(Math.random() * 12)) //parseInt는 정수로 바꿔주는 명령어
+
+        val = parseInt(Math.random() * 13);
+        alert("축하합니다!!.")
+
+
+
+        switch (val) {
+            case 0:
+                document.write("노트북 <img src='js/경품이미지/notebook.jpg' alt='notebook'>");
+                break;
+
+            case 1:
+                document.write("청소기 <img src='js/경품이미지/vacuumcleaner.jpg' alt='vacuumcleaner'>");
+                break;
+
+            case 2:
+                document.write("컴퓨터 <img src='js/경품이미지/notebook.jpg' alt='notebook'>");
+                break;
+
+            case 3:
+                break;
+                document.write("트럭 <img src='js/경품이미지/truck.jpg' alt='truck'>");
+
+            case 4:
+                document.write("건조기 <img src='js/경품이미지/dryer.jpg' alt='dryer'>");
+                break;
+
+            case 5:
+                document.write("도깨비방망이 <img src='js/경품이미지/blender.jpg' alt='blender'>");
+                break;
+
+            case 6:
+                document.write("한우세트 <img src='js/경품이미지/beefset.jpg' alt='beefset'>");
+                break;
+
+            case 7:
+                document.write("그래픽카드 <img src='js/경품이미지/graphiccard.jpg' alt='graphiccard'>");
+                break;
+
+            case 8:
+                document.write("비트코인 <img src='js/경품이미지/bitcoin.jpg' alt='bitcoin'>");
+                break;
+
+            case 9:
+                document.write("머니 <img src='js/경품이미지/money.jpg' alt='money'>");
+                break;
+
+            case 10:
+                document.write("자전거 <img src='js/경품이미지/bicycle.jpg' alt='bicycle'>");
+                break;
+
+            case 11:
+                document.write("집  <img src='js/경품이미지/house.jpg' alt='ouse'>");
+                break;
+
+            default:
+                document.write("꽝 <img src='js/경품이미지/mistake.jpg' alt='mistake.jpg'>");
+
+        }
+ 
+
+
+
+    </script>
+
+</body>
+
+</html>

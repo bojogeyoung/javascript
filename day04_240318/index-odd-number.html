@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>짝수홀수 구하기</title>
+</head>
+
+<body>
+    <script>
+       // num%2 == 0  => 짝수
+      // num%2 == 1  => 홀수
+      // 4/2 => 몫이 2 나머지는 0 
+      // 6/2 => 몫이 3 나머지는 0
+      // 5/2 => 몫이 2 나머지는 1
+      // 3/2         1         1
+      // 짝홀수 구하기
+
+       let num = prompt("숫자?"); //프롬프트로 숫자 입력 받기
+       document.write(num+"----");
+
+       if ( num !== null)
+       {
+           if(num.length == 0)
+          {
+              alert("입력이 취소되었습니다.");
+          }
+           else
+         { 
+            num = Number(num);  
+            if(num%2 == 0)//even
+            {   
+            document.write("짝수");
+            alert("짝수"); // 결과값 프롬프트 창에 띄우기
+            }
+            else
+               {
+            document.write("홀수");
+            alert("홀수");
+             }
+             
+            }
+        }
+
+     return;
+
+        
+       
+
+
+
+
+ 
+    </script>
+    
+
+</body>
+
+
+
+</html>

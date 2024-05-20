@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>예제</title>
+</head>
+ 
+
+<body>
+    <img src="../HTML_수/images/cat.jpg" id="cat" alt="고양이">
+     
+    <img src="../HTML_수/06_CSS/images/fruit01.png" id="fruit" alt="fruit">
+
+    <img src="../HTML_수/06_CSS/images/banana.png" id="banana" alt="banana">
+        <script>
+ /////////////////////////예제1////////////////////////////////////////////////////
+
+            let cat = document.querySelector("#cat");
+            
+            
+            // cat.onclick = function(event) {
+            //     alert("이벤트 유형 : " + event.type + ", 이벤트 발생 위치 : " + event.pageX + "," + event.pageY);
+
+            // }
+            
+            cat.onclick = changePic; 
+            function changePic(){
+                cat.src = "../HTML_수/images/mango.png";
+
+            }
+
+ ///////////////////////////예제2//////////////////////////////////////////////////
+
+            let cover = document.getElementById("fruit");
+            cover.addEventListener("mouseover", changePic3);
+            cover.addEventListener("mouseout", originPic);
+
+            function changePic3(){
+                cover.src= "../HTML_수/images/mango.png";
+            }
+
+            function originPic(){
+                cover.src = "../HTML_수/06_CSS/images/fruit01.png";
+            }
+
+
+ ////////////////////////////예제3 (예제2에 확장개념?)/////////////////////////////////////////////////
+                //예제2는 함수이름을 불러와야하지만 예제3은 익명함수로 함수를 만든다?
+
+            let bn = document.getElementById("banana");
+            bn.addEventListener("mouseover", function(){
+                bn.src ="../HTML_수/images/mango.png";
+            });
+
+            bn.addEventListener("mouseout", function(){
+                bn.src = "../HTML_수/06_CSS/images/banana.png";
+            });
+
+
+
+        </script>
+
+
+
+</body>
+</html>

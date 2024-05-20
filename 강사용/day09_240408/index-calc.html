@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>사칙연산</title>
+    </head>
+    <body>
+        <script>
+            let num1 = prompt("숫자를 1개 입력하세요");
+            num1 = parseInt(num1);
+            let num2 = prompt("숫자를 1개 입력하세요");
+            num2 = parseInt(num2);
+            let op = prompt("1.더하기  2.빼기 3.곱하기 4.나누기 중에서 선택하세요");
+            let ret = 0;
+            switch(op){
+                case "1"://더하기
+                    ret = addNumber(num1, num2);
+                    break;
+                case "2"://빼기
+                    break;
+                case "3"://곱하기
+                    break;
+                case "4"://나누기
+                    ret= divideNumber(num1,num2);
+                    break;
+            }
+            
+            document.write("계산결과는 "+ret+"입니다.");
+            //minusNumber
+            //multiNumber
+            //divideNumber
+
+            function addNumber(num1, num2){
+                //함수가 해야할일.
+                let result = num1+num2;
+                return result;
+            }
+
+            function divideNumber(num1, num2){
+                let result = num1/num2;
+                return result.toFixed(2);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>p.626노드생성</title>
+</head>
+<body>
+    <!-- 
+        클릭이나 이벤트가 발생하면 내용이 나타나는 경우가 있다. css의 display속성을 사용해서 만들수도 있지만
+        DOM트리에 새로운 노드를 추가하는 방법도 있다. 주의할점은 노드를 추가하면 단순히 요소 노드뿐 아니라
+        텍스트와 속성노드도 함께 추가해야한다는 것이다. 
+     -->
+
+
+
+    <img src="chrome://new-tab-page/icons/google_logo.svg" alt="">
+    <!-- 1. 요소노드 만들기 createElement(노드명)메서드 
+        DOM에 새로운 요소를 추가할 때 가장 먼저 할일은 요소노드를 만드는것
+        이때 사용하는 것이 createElement()메서드이며 괄호안에 해당하는 요소 노드를 만들면 됨
+        2. 텍스트노드만들기 createTextNode(텍스트)메서드
+        요소를 만든다음 그다음에 텍스트 노드를 "자식 노드로 만들어" 연결해야함
+    -->
+    <h1>DOM을 공부합시다. </h1>
+    <a href="#">구글사이트</a> 
+
+    <!-- <a href="#" onclick="addP(); this.onclick='';">구글사이트</a>  -->
+    <!-- this.onclick='' 링크를 클릭하면 addP()함수가 한번만 실행되도록 합니다.-->
+    <div id="info">
+        <p>DOM은 document object model의 줄임말입니다.</p>
+    </div>
+    
+
+    
+      
+    <script>
+
+
+      //document.createTextNode(); 메서드 => (1)새로운 텍스트 추가하기
+      //자식 노드 연결하기 - 부모요소.appendChild(자식노드) 메서드
+
+      //1. Element(태그 혹은 요소) 생성
+      let newP = document.createElement("p");
+      //2. 위의 태그에 쓰일 텍스트노드 생성
+      let textNode = document.createTextNode("어렵게 만든 DOM은 document object model의 줄임말입니다.");
+      //3. element와 텍스트노드와의 관계 설정 => 부모노드.appendChild(자식노드)
+      newP.appendChild(textNode); 
+      
+      //4.newP를 div부모에 appendChild()로 연결해주기
+      //부모인 div를 찾아오기
+    
+      let myParent = document.getElementById("info"); // 아이디 info에 접근
+      myParent.appendChild(newP);            // 부모 자식간 연결
+
+     // p.629 혼자해보기
+
+    //  function addP(){
+    //     let newP = document.createElement("p");
+    //     let textNode = document.createTextNode("어렵게 만든 DOM은 document object model의 줄임말입니다.");
+    //     newP.appendChild(textNode); 
+    //     document.getElementById("info").appendChild(newP); 
+
+    //  }
+
+       //document.createAttribute() 메서드 => (2)새로운 요소 추가하기
+      //1.img 태그 생성
+      let newImg = document.createElement("img");
+      //2.alt,src속성 만들고 지정하기
+      let srcNode = document.createAttribute("src");
+      let altNode = document.createAttribute("alt");
+      srcNode.value ="images/banana.png";     //ard 속성값 지정         
+      altNode.value ="바나나이미지"; // alt속성값 지정
+      //3.속성노드 연결하기 => 요소명.setAttributeNode(속성노드)
+      newImg.setAttributeNode(srcNode);
+      newImg.setAttributeNode(altNode);
+      //4.자식노드 연결하기
+      document.getElementById("info").appendChild(newImg);
+
+     //이미지태그를 지워봅시다.
+     newImg.parentNode.removeChild(newImg);   
+     //p.636 노드 삭제하기 
+     //p태그를 지웁시다. 구글사이트 클릭시에 p태그 삭제하기.
+     //1. a태그를 찾아옵시다.
+     let aTag = document.getElementsByTagName("a");
+     //2. 위에서 찾은 a태그의 변수(객체).addEventListener("click", 클릭시해야할 동작)
+    
+     aTag[0].addEventListener("click",function(){ //클릭이 일어났을때 동작을 정의한다. 
+        
+        if( newP != null)
+            document.getElementById("info").removeChild("newP");
+
+     });
+     
+     
+     
+     
+     
+     
+     
+     //1.반드시 부모 노드를 먼저 찾기
+     //노드.parentNode
+     
+     //2.removeChild()메서드 : 자식 노드를 삭제하는 역할
+     //부모노드.removeChilrd(자식노드); 
+
+
+
+
+      
+
+
+
+    </script>
+    
+</body>
+</html>

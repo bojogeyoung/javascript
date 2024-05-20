@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // function dWrite(함수가 일을 할 때 필요로 하는 재료){
+    //     return "고길동";
+    // }
+
+ 
+        //함수호출
+        dWrite();
+
+        dWritePara("함수임");
+        dWritePara("함수임1");
+        dWritePara("함수임2");
+        dWritePara("함수임3");
+        dWritePara("함수임4");
+
+        function dWritePara(str){//let str
+            document.write("<br>"+str);
+        }
+        //함수정의
+        function dWrite(){
+            document.write("<br>이것이 함수다!");
+        }
+
+
+    </script>
+</body>
+</html>

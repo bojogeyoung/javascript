@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    #container div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        display: inline-block;
+        border: none;
+    }
+
+    #lotto1{
+        background-color: red;
+    }
+
+    #lotto2{
+        background-color: blue;
+    }
+
+    #lotto3{
+        background-color: green;
+    }
+
+
+    #lotto4{
+        background-color: purple;
+    }
+
+
+    #lotto5{
+        background-color: orange;
+    }
+
+    #lotto6{
+        background-color: yellow;
+    }
+
+    input{
+        width: 100px;
+        height: 80px;
+        background-color: rgb(247, 65, 20);
+        border: none;
+        /* position:relative;
+        justify-content : center;
+        align-items: center; */
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 1.5em;
+        color: #fff;
+
+
+    }
+ 
+    </style>
+</head>
+<body>
+   <h1>LOTTO</h1>
+    <input type="submit" value="시작" onclick="lottoStart(45)">
+
+    <div id = "container">
+        <div id = "lotto1"><p></p></div>
+        <div id = "lotto2"><p></p></div>
+        <div id = "lotto3"><p></p></div>
+        <div id = "lotto4"><p></p></div>
+        <div id = "lotto5"><p></p></div>
+        <div id = "lotto6"><p></p></div>
+    </div>
+   <script>
+    
+    //   function lottoStart(number){
+    //     let lotto1Tag=document.querySelectorAll("div");
+
+    //     for(i=0; i<lotto1Tag.length; i++){
+    //         let randomeNumber=parseInt(Math.random()*45+1);
+    //         lottoTag[i].innerHTML=randomeNumber;
+    //     }
+ 
+
+    //   }
+
+    function lottoStart(number){
+        let lotto1Tag=document.querySelectorAll("div").appendChild(div);
+
+        for(i=0; i<lotto1Tag.length; i++){
+            let randomeNumber=(parseInt(Math.random()*45+1));
+            lotto1Tag[i].innerHTML=randomeNumber;
+        }
+        
+
+    }    
+ 
+    </script>
+</body>
+</html>

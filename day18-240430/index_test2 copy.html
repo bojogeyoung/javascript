@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <p>공부가 끝난 것은 클릭해서 삭제 할 수 있습니다.</p>
+    <input type="text" id="text" autofocus>
+    <input type="button" id="btn" value="추가">
+    <hr>
+    <div id="addText"></div>
+
+    <script>
+        //1. 변수선언 
+        let inputs = document.querySelectorAll("input");
+        let divv = document.querySelector("#addText");
+        let newUl = document.createElement("ul");
+        let newLi;
+
+        //2. 선택한 요소 안에 자식요소를 추가
+        divv.appendChild(newUl);  
+
+        //3. 
+        inputs[0].addEventlistener("keydown", function(event)){
+           
+            if(event.keyCode==13){ //키이벤트 엔터키 적용
+                let textText = inputs[0].value;
+                newLi = document.createElement("li");
+                let newText = document.createTextNode(textText);
+                newUl.appendChild(newLi);
+                newLi.appendChild(newText);
+                inputs[0].value="";
+
+                let liList = document.querySelectorAll("li" );
+           
+
+
+            }
+        }
+
+
+
+
+    </script>
+    
+    
+ </body>
+ </html>

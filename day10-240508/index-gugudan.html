@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <style>
+        div{
+            background-color : rgb(209, 212, 10); 
+            border : 1px solid #000;
+            padding: 20px;
+            display: inline-block;
+        }
+         div:nth-child(2n){
+               background-color : rgb(218, 78, 44);
+
+         }
+
+    </style>
+</head>
+<body>
+
+    <script>
+
+        for(i=1; i<=9; i++)  
+        {
+            document.write("<div>")
+            document.write("<h3>"+i +"단"+"</h3>");   
+                     
+            for(j=1; j<=9; j++)  
+            {
+                document.write(i + "x" + j +"="+ i*j+"<br>");  
+ 
+           } 
+           document.write("</div>")
+        }
+  
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            width: 150px;
+            display: inline-block;
+            text-align:justify;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <legend>
+            <p><label for="num">학생수</label><input type="number" name="num" id="num" placeholder="필수 입력" required></p>
+            <p><label for="subject">학과 과목</label><input type="number" name="subject" id="subject" placeholder="필수 입력" required></p>
+            <p><label for="total_textbook">전체 교과서 양</label><input type="number" name="total_textbook" id="total_textbook" readonly></p>
+            <p><button type="submit">전송</button></p>
+        </legend>
+        
+        
+        
+    </form>
+    <script>
+        let numElement = document.querySelector("#num");
+        subject.onkeyup = function(){
+            if ( num.value == "")
+            {
+                numElement.focus();
+                return;
+            }
+            total = num.value*subject.value;//num, subject는 ID임
+            //alert(total);
+            total_textbook.setAttribute("value", total);
+        };
+    </script>
+</body>
+</html>

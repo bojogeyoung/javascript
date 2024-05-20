@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>이벤트</title>
+</head>
+<body>
+
+    <!-- <img src="../day12-240415/images/doll.png" alt="인형" onmouseover="myDo()"> -->
+    <img src="../day12-240415/images/doll.png" alt="인형">
+    <img src="../day12-240415/images/doll2.png" alt="인형">
+
+    <script>
+        let imgTagNodeList  = document.querySelectorAll("img"); // 1. 변수에 담는다. 
+       
+        imgTagNodeList[0].onmouseover=function(){
+            imgTagNodeList[0].style.transform="scale(110%)";
+        };
+
+        // imgTagNodeList[0].onmouseout=function(){
+        //     imgTagNodeList[0].style.transform="scale(100%)";
+        // };
+
+        imgTagNodeList[1].onmouseover=function(){
+            imgTagNodeList[1].style.transform="scale(90%)";
+        };
+
+        // imgTagNodeList[1].onmouseout=function(){
+        //     imgTagNodeList[1].style.transform="scale(100%)";
+        // };
+  
+        for(let i = 0; i<imgTagNodeList.length; i++)
+        {
+            imgTagNodeList[i].onmouseleave=function(){
+            this.style.transform="scale(100%)"; // this는 현재 자신의 객체를 가리킴
+        };
+
+        } 
+ 
+ 
+
+
+        //imgTag.onmouseover = myDo ; // 2. 정의한 변수 안에 이벤트 와 함수이름 정의 ,  myDo(); 괄호를 넣으면 실행을 먼저 해버리기 때문에 함수이름으로 지정만한다.
+        // imgTag.onmouseout= myDoLeave ;  
+
+        // function myDo(){
+        //     imgTag.style.transform = "scale(150%)";
+        //     // imgTag.style.transform = "rotate(30deg)";    2개는 연속으로 안된다?    
+        //    // imgTag.style.transform = "translate(20px, 20px)"; 3개도 연속으로 안된다?     
+            
+        // }
+
+        // function myDoLeave(){
+        //     imgTag.style.transform = "scale(100%)";  
+
+        // }
+
+
+
+
+ 
+    </script>
+    
+</body>
+</html>

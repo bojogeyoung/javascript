@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>복습</title>
+</head>
+
+<body>
+    <script>
+        //for문 _ 구구단
+
+        // for(let i=1; i<10; 1++){
+        //     document.write("3X" + i + "=" + 3*i +"<br>");
+        // }
+
+
+        // for(i=1; i<10; i++){ // 1인 i가 10보다 작은수까지 1씩 증감하면서 반복한다.
+
+        //     document.write("<h3>"+i+"단"+"</h3>");
+
+        //     for(j=1; j<10; j++) //1인 j가 10보다 작은수까지 1씩 증감하면서 반복한다.
+        //     {
+        //         document.write(i+"x" + j + "=" + i*j + "<br>" ); 
+        //     }
+        //     // 두번째 for문이 끝났기 때문에  첫번째 for문이 끝날때까지 숫자가 증감되면서 반복된다.? 
+        //     // 안쪽 for문을 모두 실행한 후 바깥쪽 for문을 실행한다?
+        // }
+
+
+        // document.write("break;"+"<br>");
+
+        // //for~if문, break;
+
+        // for(let t=1; t<10; t++){ // 초기값 1인 t가 10보다 작은수가 될때까지 1씩 증감
+        //     // if(t>10){ //만약 t가 5보다 작은 수가  브레이크
+        //     //   break; // 조건문 상관없이 강제 반복문 종료
+
+        //     // } // if 문이 없어도 실행은 됨?>
+        //     document.write("5X" + t + "=" + 5*t + "<br>");
+        // }
+
+        // //for~if, continue;
+        // document.write("continue;"+"<br>");
+
+        // for(let s=1; s<10; s++){
+        //     if(s%2===0){
+        //         continue; // 현재 반복문을 중단하고 다음 반복으로 진행, 짝수만 보이거나 홀수만 보이게 할때 응용
+        //     }
+        //     document.write("5X" + s + "=" + 5*s + "<br>");
+        // }
+
+
+        //연습문제 for문
+        // document.write("연습문제 for문" + "<br>"); //01 연습문제
+
+        // for (let a = 1; a <= 10; a++) {
+        //     document.write(a + "<br>");
+        // }
+        // document.write("연습문제 for문 2번째" + "<br>"); //02 연습문제
+
+
+
+        // for (b = 0; b < 9; b++) {
+        //     document.write(b + "번째 내용" + "+ data[" + b + "]" + "<br>");
+        // }
+
+        // document.write("연습문제 for문 3번째" + "<br>"); //03 연습문제, 별
+        // //https://hianna.tistory.com/368 참고
+
+        // for(let c=0; c<5; c++){
+        //   for(let d=0; d<5; d++){
+        //     document.write("*");
+        //   }
+        //     document.write("<br>");
+        // }
+
+
+        // // 순서대로 있는 별 만들기
+        // for (let e=0; e<5; e++){
+        //     for(let f=0; f<=e; f++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+
+        //while문 : 패스워드가 1234이면 환영합니다 메시지를 출력한 후 멈추기
+        // 그렇지 않으면 패스워드를 잘못 입력했씁니다. 다시 입력해주세요.
+        //while은 true인 동안 명령을 반복, false는 한번도 실행하지 않을 수 있음.
+        //do while은 최소false 한번은 실행함
+
+        // let pw = prompt("패스워드를 입력하세요");            
+ 
+        // if( pw == 1234){
+        //    alert("환영합니다.");
+            
+        // } else {
+        //     alert("잘못 입력했습니다. 다시 입력해주세요.");
+        // }
+
+        // // 1부터 100까지의 짝수의 합 구하기
+
+ 
+
+        // for (let g = 1; g < 101; g++){ // 1부터 100까지 범위지정 
+           
+        //     if(g % 2 == 0){ // 짝수만 필터링
+        //         sum += g; //짝수일때만 합 
+        //     }
+           
+        //     document.write("짝수합은 = " + sum);
+        //     // return; 
+        // }
+
+        // 입력받은 수 모두 합하기
+        
+        // let num1 = prompt("1번째 입력");
+        // let num2 = prompt("2번째 입력");
+        // let num3 = prompt("3번째 입력");
+        // sum = num1 + num2 + num3 // 이상함
+        // alert("현재 합은=" + sum);
+
+        // 입력 받은 수가 60점 이상이면 합격 60점 미만이면 불합격
+
+        // let score = prompt("점수를 입력하시오 ")
+
+        // if(score>=60){
+
+        //     alert("합격입니다."); 
+        // } else {
+        //     alert("불합격입니다.");
+        // }
+
+        // // 1부터 100까지의 합을 구하시오
+        // sum = 0;   // sum의 초기값을 지정해줘야함.   
+        // for(i=1; i<=100; i++)
+        // {
+        //    sum += i;
+          
+        // }   document.write("전체 합은=" + sum);
+ 
+
+        // 입력된 온도가 25도 이상이면 얼음물, 그렇지 않으면 뜨거운물 출력
+
+        let cc = prompt("온도를 입력하시오");
+
+        if(cc >= 25){
+            alert("얼음물");
+        }else{
+            alert("뜨거운물");
+        }
+
+
+        //입력된 숫자가 홀수면 홀수, 짝수면 짝수로 출력
+
+        let num = prompt("숫자를 입력하시오");
+        if(num % 2 == 0){
+
+            alert("짝수");
+        } else{
+            alert("홀수");
+        }
+        
+
+        // 두개의 정수를 입력받아 둘중의 큰수 출력
+
+        let a = prompt('숫자를 입력하시오');
+        let b = prompt('숫자를 입력하시오');
+
+        if(a < b )
+        {
+            alert("큰 숫자는" + b + "입니다");
+            document.write("큰 숫자는" + b + "입니다");   
+
+        } else{
+              max = a ;
+              alert("큰 숫자는 " + a + "입니다");
+              document.write("큰 숫자는 " + a + "입니다");
+
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

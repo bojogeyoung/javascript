@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>        
+    </style>
+</head>
+<body>
+    <script>
+        function sample(){
+            let sum = 0;
+            let count=1;
+            while ( true ){
+                let value = parseInt(prompt("수입력", 1));
+                if ( value == 0)
+                {
+                    document.write("종료합니다");
+                    return;
+                }
+                sum=sum+value;
+                document.write(count + ". "+sum+"<br>");
+                count++;
+            }
+            document.write("총 " +count+"번 실행했습니다");
+        }
+        sample();
+    </script>
+</body>
+</html>
+
+

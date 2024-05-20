@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로또</title>
+        <style>
+            div{
+                width:1000px;
+                height: 100px;
+                display: inline-block;
+                position: relative;
+                
+                
+            }
+            p{
+                position: absolute;
+                text-align: center;
+                top: -10px;
+                left: 30px;
+                font-weight: bold;
+                color : white;
+                font-size:xx-large;
+            }
+            h2{
+                display: none;
+            }
+            
+                
+            
+            .lotto1{
+                background-color: blueviolet;
+                width : 100px;
+                height : 100px;
+                border-radius: 50%;
+            }
+            .lotto2{
+                background-color: red;
+                width : 100px;
+                height : 100px;
+                border-radius: 50%;
+            }
+            .lotto3{
+                background-color: blue;
+                width : 100px;
+                height : 100px;
+                border-radius: 50%;
+            }
+            .lotto4{
+                background-color: pink;
+                width : 100px;
+                height : 100px;
+                border-radius: 50%;
+            }
+            .lotto5{
+                background-color: chartreuse;
+                width : 100px;
+                height : 100px;
+                border-radius: 50%;
+            }
+            .lotto6{
+                background-color: cadetblue;
+                width : 100px;
+                height : 100px;
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>로또 자동 추첨</h1>
+        <input type="button" id="btn" value="버튼을 눌러서 번호를 확인하세요">
+        <br>
+        <div id="rect">
+            <div class="lotto1"><p></p></div><!--1-->
+            <div class="lotto2"><p></p></div><!--2-->
+            <div class="lotto3"><p></p></div><!--3-->
+            <div class="lotto4"><p></p></div><!--4-->
+            <div class="lotto5"><p></p></div><!--5-->
+            <div class="lotto6"><p></p></div><!--6-->
+        </div>
+        <h2>꽝입니다</h2>
+
+
+        <script>
+            let arr = new Array(45);
+            let ranNum=0 ;
+            let tmp =0;
+
+            for(let i =0 ; i<arr.length; i++){
+                arr[i] = i+1;
+            }//규칙적인 배열
+
+            for(let i = 0 ; i<arr.length; i++){
+                ranNum= parseInt(Math.random()*45);
+                tmp = arr[i];
+                arr[i] = arr[ranNum];
+                arr[ranNum]=tmp;
+
+            }//배열 랜덤하게 
+           /* for(let i = 0 ;i<6;i++){
+                document.write((i+1)+"번째 숫자 ="+arr[i]+"<br>");
+            }*/
+            let btn = document.querySelector('#btn');
+            let num = document.querySelectorAll("p");
+            let h2 = document.querySelector("h2");
+            
+            function myLotto(){
+                num[0].innerHTML = arr[0];
+                num[1].innerHTML = arr[1];
+                num[2].innerHTML = arr[2];
+                num[3].innerHTML = arr[3];
+                num[4].innerHTML = arr[4];
+                num[5].innerHTML = arr[5];
+                h2.style.display="block";
+                h2.innerHTML="꽝입니다";
+
+            }
+            btn.addEventListener("click",myLotto);
+
+            
+
+            
+
+            
+
+        
+
+        </script>
+    </body>
+
+</html>
